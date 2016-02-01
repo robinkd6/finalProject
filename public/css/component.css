@@ -3,7 +3,7 @@
 	position: relative;
 	width: 100%;
 	background: #333;
-	background-image: url('../img/orange_space.jpg');
+	background-image: url('../img/overview.jpg');
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
@@ -42,7 +42,6 @@
 	font-family: Josefin Sans;
 	font-size: 25px;
 	font-weight: bolder;
-
 }
 
 }
