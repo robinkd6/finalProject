@@ -28,6 +28,24 @@
 	font-size: 75px;
 	font-weight: bolder;
 }
+
+.how {
+	position: relative;
+	margin: 0;
+	padding-bottom: 375px;
+	color: #f9f1e9;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	font-family: Josefin Sans;
+	font-size: 25px;
+	font-weight: bolder;
+
+}
+
+}
 .navbar.transparent.navbar-inverse .navbar-inner {
     border-width: 0px;
     -webkit-box-shadow: 0px 0px;
@@ -48,13 +66,6 @@
 	letter-spacing: 0.1em;
 }
 
-
-
-
-
-.main-title .thin {
-	font-weight: 200;
-}
 .codrops-header {
 	width: 100%;
 }
