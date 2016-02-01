@@ -3,16 +3,16 @@
 	position: relative;
 	width: 100%;
 	background: #333;
+	background-image: url('../img/orange_space.jpg');
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
 	z-index: 1;
 }
 
-.demo-1 .large-header {
-	background-image: url('../img/orange_space.jpg');
+.container coverPhoto {
+	width: 100%;
 }
-
 
 .main-title {
 	position: absolute;
@@ -24,7 +24,23 @@
 	left: 50%;
 	-webkit-transform: translate3d(-50%,-50%,0);
 	transform: translate3d(-50%,-50%,0);
+	font-family: Josefin Sans;
+	font-size: 75px;
+	font-weight: bolder;
 }
+.navbar.transparent.navbar-inverse .navbar-inner {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    font-family: Caviar-Dreams;
+    font-size: 30px;
+    z-index: 2;
+}
+.navbar li { color: #000 } 
 
 .demo-1 .main-title, 
 .demo-3 .main-title {
@@ -83,12 +99,16 @@
 }
 .hook {
 	float: left;
+	border: 10px single black;
 }
 .hook2 {
 	float: left;
+	border: 10px single black;
+	margin-right: 2;
 }
 .hook3 {
-	float: right;
+	margin-right: 0;
+	border: 10px single black;
 }
 
 @media only screen and (max-width : 768px) {
