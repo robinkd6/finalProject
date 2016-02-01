@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/robinkd6/finalProject#readme",
   "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
     "passport": "^0.3.2",
     "passport-facebook": "^2.0.0"
   }
