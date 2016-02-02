@@ -29,10 +29,14 @@
 	font-weight: bolder;
 }
 
+}
 .how {
-	position: relative;
-	margin: 0;
-	padding-bottom: 375px;
+	height: 10px;
+	width: 300px;
+	border: 1px solid black;
+	position: static;
+	margin-left: 50%;
+	padding-bottom: 0%;
 	color: #f9f1e9;
 	text-align: center;
 	top: 50%;
@@ -42,9 +46,9 @@
 	font-family: Josefin Sans;
 	font-size: 25px;
 	font-weight: bolder;
-}
 
 }
+
 .navbar.transparent.navbar-inverse .navbar-inner {
     border-width: 0px;
     -webkit-box-shadow: 0px 0px;
@@ -71,7 +75,7 @@
 
 #signupHooks {
 	display: block;
-	width:100%;
+	
 
 }
 .hook {

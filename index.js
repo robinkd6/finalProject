@@ -1,14 +1,14 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
-var passport = require('passport');
-var config = require('./oauth.js');
-var FacebookStrategy = require('passport-facebook').Strategy;
-var app = express();
+var express = require('express'),
+	session = require('express-session'),
+	bodyParser = require('body-parser'),
+	path = require('path'),
+	passport = require('passport'),
+	config = require('./oauth.js'),
+	FacebookStrategy = require('passport-facebook').Strategy,
+	app = express();
 
-//middleware 
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(express.static(__dirname + '/public'));
+
 
 // serialoze and deserialize
 passport.serializeUser(function(user, done) {
@@ -32,6 +32,12 @@ passport.use(new FacebookStrategy({
   }
 ));
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
+// Make sure this is the last route loaded.
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 
-httpServer.listen(process.env.PORT || 3000);
+app.listen(3000);

@@ -6,4 +6,4 @@ var ids = {
 	}
 };
 
-module.exports = ids
+module.exports = ids;
