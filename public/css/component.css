@@ -74,22 +74,26 @@
 }
 
 #signupHooks {
-	display: block;
+	display: inline-block;
+	width: 100%;
 	
 
 }
 .hook {
-	float: left;
+/*	float: left;*/
 	border: 10px single black;
+	width: 55%;
 }
 .hook2 {
-	float: left;
+	/*position: left;*/
 	border: 10px single black;
 	margin-right: 2;
+	width: 75%;
 }
 .hook3 {
 	margin-right: 0;
 	border: 10px single black;
+	width:55%;
 }
 
 @media only screen and (max-width : 768px) {

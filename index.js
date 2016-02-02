@@ -19,6 +19,15 @@ passport.deserializeUser(function(obj, done) {
 	done(null, obj);
 });
 
+app.get('/signup', function(req, res){
+  res.send('Hello World');
+});
+
+app.get('/login', function(req, res){
+  res.send('login');
+});
+
+
 // config
 passport.use(new FacebookStrategy({
   clientID: config.facebook.clientID,
