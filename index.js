@@ -35,11 +35,11 @@ passport.use(new FacebookStrategy({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use('/api/personality', require('./controllers/personality'));
+app.use('/api/personality', require('./routes/personality'));
 
 // Make sure this is the last route loaded.
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
