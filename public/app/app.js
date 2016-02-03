@@ -11,6 +11,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .when('/home', {
   	templateUrl: 'app/views/home.html'
   })
+  .when('/signup', {
+    templateUrl: 'app/views/signup.html'
+  })
+  .when('/login', {
+    templateUrl: 'app/views/login.html'
+  })
   .otherwise({
     templateUrl: 'app/views/404.html'
   });

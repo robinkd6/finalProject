@@ -11,6 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/signup', function(req, res){
+  res.render('views/signup')
   
 });
 

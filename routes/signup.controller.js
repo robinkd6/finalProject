@@ -3,8 +3,8 @@ var router = express.Router();
 var request = require('request');
 var config = require('config.json');
 
-router.get('/', function (req, res) {
-    res.render('register');
+router.get('/signup', function (req, res) {
+    res.render('hello');
 });
 
 router.post('/', function (req, res) {
