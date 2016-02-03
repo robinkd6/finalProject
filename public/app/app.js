@@ -1,4 +1,4 @@
-var app = angular.module('WatsonApp', ['ngRoute', 'WatsonCtrls']);
+var app = angular.module('PersonalityApp', ['ngRoute', 'AppCtrls']);
 
 //console.log('Inside the angular script', app);
 
@@ -6,7 +6,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   $routeProvider
   .when('/analyze', {
     templateUrl: 'app/views/analyze.html',
-    controller: 'WatsonCtrl'
+    controller: 'PersonalityCtrl'
   })
   .otherwise({
     templateUrl: 'app/views/404.html'
