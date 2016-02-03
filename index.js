@@ -10,15 +10,6 @@ var express = require('express'),
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// serialoze and deserialize
-passport.serializeUser(function(user, done) {
-	done(null, user);
-});
-
-passport.deserializeUser(function(obj, done) {
-	done(null, obj);
-});
-
 app.get('/signup', function(req, res){
   res.send('Hello World');
 });
