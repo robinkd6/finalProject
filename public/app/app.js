@@ -8,7 +8,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: 'app/views/analyze.html',
     controller: 'PersonalityCtrl'
   })
-  .when('/home', {
+  .when('/', {
   	templateUrl: 'app/views/home.html'
   })
   .when('/signup', {
