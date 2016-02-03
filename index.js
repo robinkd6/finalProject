@@ -7,7 +7,7 @@ var express = require('express'),
 	FacebookStrategy = require('passport-facebook').Strategy,
 	app = express();
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // serialoze and deserialize
@@ -34,6 +34,8 @@ passport.use(new FacebookStrategy({
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+app.use('/api/personality', require('./controllers/personality'));
 
 // Make sure this is the last route loaded.
 app.get('/*', function(req, res) {
