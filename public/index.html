@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="WatsonApp">
+<html lang="en" ng-app="PersonalityApp">
 	<head>
 		<base href="/">
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>LinkUp</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -14,7 +13,6 @@
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
 		<script src="app/app.js"></script>
 		<script src="app/controllers.js"></script>
-		<script src="app/services.js"></script>
 	</head>
 	<body>
 <!-- 		<div class="container coverPhoto">
@@ -38,34 +36,34 @@
 		</div> -->
 		<h1 class="main-title">LinkUp</h1>
 	</div>
-
-<!-- <div class="codrops-top clearfix">
-
-</div> -->
-<div class="codrops-header">
-		<h1>LinkUp and find the right match</h1>
-	<div class="well" id="signupHooks">
-		<div class="hook">
-	  	<ul>
-			  <li>Signing up takes two minutes and is totally free.</li>
-			  <li>Our matching algorithm helps you find the right people.</li>
-			  <li>iOS or Android? Take us on the go!</li>
-	  	</ul>
-		</div>
-	</div>
-	<!-- Angular views -->
-	<div class="container">
-	  		<ng-view></ng-view>
-	</div>
-</div>
-
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/signup">Signup</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+<br><br>
+<br><br>
+<br><br>
+		<!-- Angular views -->
+<div class="container">
+  		<ng-view></ng-view>
 </div>
 		<!-- End of Angular views -->
-
-		<script src="js/TweenLite.min.js"></script>
-		<script src="js/EasePack.min.js"></script>
-		<script src="js/rAF.js"></script>
-		<script src="js/banner.js"></script>
-
 	</body>
 </html>

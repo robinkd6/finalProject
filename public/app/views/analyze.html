@@ -1,1 +1,12 @@
-<h1>Analyze View</h1>
+<h1>Paste a summary about yourself, it could be anything</h1>
+angular route (with a conrtoller assigned!!)brings you to this page,
+form goes here, and then submit to angular http, the url of the http calls express controller(app.get('/jkkjh'))
+express controller then calls API, results came back. Because we assigned an Angular controller for the angular route earlier, we can now render this data through Angular controller and send to front end
+<form ng-submit="analyze()">
+  <div class="form-group">
+    <label for="title">Preferably between 3,500 - 6,000 for accurate results.</label>
+    <input type="text" class="form-control" id="summary" ng-model="summary">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
