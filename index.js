@@ -11,11 +11,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/signup', function(req, res){
-  res.send('Hello World');
+  
 });
 
 app.get('/login', function(req, res){
-  res.send('login');
+ 
 });
 
 
