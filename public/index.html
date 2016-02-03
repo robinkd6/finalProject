@@ -11,29 +11,34 @@
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
-	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
 		<script src="app/app.js"></script>
 		<script src="app/controllers.js"></script>
 	</head>
 	<body>
+<!-- 		<div class="container coverPhoto">
+ -->
+<div class="content">
+</div>
+ <!-- Navigation -->
+ 	 	<!-- <section class="section section-menu" id="Antonio"> -->
+				<nav class="menu menu--antonio">
+					<ul class="menu__list">
+						<li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
+						<li class="menu__item"><a href="/" class="menu__link">About</a></li>
+						<li class="menu__item"><a href="/signup" class="menu__link">Signup</a></li>
+						<li class="menu__item"><a href="/login" class="menu__link">Login</a></li>
+					</ul>
+				</nav>
+			
 
-		<!-- <div class="container coverPhoto"> -->
-
-			<div class="content">
-			 <!-- Navigation -->
-    <nav class="navbar navbar navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="/"><span style="font-family: Caviar Dreams">LinkUp</span></a>
-            </div>
-
+	<div id="large-header" class="large-header">
+		<canvas id="demo-canvas"></canvas>
+		<!-- <div class="howHook">
+		<h3 class="how">How it works</h3>
+		</div> -->
+		<h1 class="main-title">LinkUp</h1>
+	</div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -59,9 +64,9 @@
 <br><br>
 <br><br>
 		<!-- Angular views -->
-    <div class="container">
+<div class="container">
   		<ng-view></ng-view>
-  	</div>
+</div>
 		<!-- End of Angular views -->
 	</body>
 </html>

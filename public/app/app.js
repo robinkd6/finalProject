@@ -5,11 +5,11 @@ var app = angular.module('PersonalityApp', ['ngRoute', 'AppCtrls']);
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: 'app/views/home.html',
-  })
-  .when('/analyze', {
     templateUrl: 'app/views/analyze.html',
     controller: 'PersonalityCtrl'
+  })
+    .when('/home', {
+  	templateUrl: 'app/views/home.html'
   })
   .otherwise({
     templateUrl: 'app/views/404.html'
