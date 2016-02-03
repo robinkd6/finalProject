@@ -9,6 +9,7 @@ var express = require('express'),
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.set('view-engine', 'ejs');
 
 app.get('/signup', function(req, res){
   
