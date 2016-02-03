@@ -1,8 +1,17 @@
-var app = angular.module('MyApp', ['satellizer']);
- app.config(function($authProvider) {
-  	$authProvider.facebook ({
-  		clientID: '1264972500185214',
-			clientSecret: '9a64096e02523e71a97b14665c68511f',
-			callbackURL: 'http://127.0.0.1:1337/auth/facebook/callback'
-  	});
-  	}
+var app = angular.module('WatsonApp', ['ngRoute', 'WatsonCtrls']);
+
+//console.log('Inside the angular script', app);
+
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  $routeProvider
+  .when('/analyze', {
+    templateUrl: 'app/views/analyze.html',
+    controller: 'WatsonCtrl'
+  })
+  .otherwise({
+    templateUrl: 'app/views/404.html'
+  });
+
+  $locationProvider.html5Mode(true);
+  //$locationProvider.html5Mode(false).hashPrefix("!");
+}]);
