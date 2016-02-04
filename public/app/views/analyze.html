@@ -1,12 +1,17 @@
 <h1>Paste a summary about yourself, it could be anything</h1>
-angular route (with a conrtoller assigned!!)brings you to this page,
-form goes here, and then submit to angular http, the url of the http calls express controller(app.get('/jkkjh'))
-express controller then calls API, results came back. Because we assigned an Angular controller for the angular route earlier, we can now render this data through Angular controller and send to front end
-<form ng-submit="analyze()" >
+<form ng-submit="analyze()">
   <div class="form-group">
     <label for="title">Preferably between 3,500 - 6,000 for accurate results.</label>
-    <input type="text" class="form-control" name="summary" ng-model="summary">
+    <textarea rows="10" cols="50" type="text" class="form-control" name="summary" ng-model="summary"></textarea>
   </div>
-
+  <div ng-hide="hideError">{{err}}</div>
+  <p>Sample text:</p>
+  <p>Call me Ishmael. Some years ago-never mind how long precisely-having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off-then, I account it high time to get to sea as soon as I can.</p>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<div ng-hide="hide">Here is your personality
+	<h2>Personality/Big 5</h2>
+		<ul>
+			<li ng-repeat="big5 in big5s">{{big5.name}}<p><small>{{big5.percentage*100 | number:0}}%</small></p></li>
+		</ul>
+</div>
