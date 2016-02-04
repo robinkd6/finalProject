@@ -10,8 +10,11 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <div ng-hide="hide">Here is your personality
+<h3>Your Myers Briggs Equivalent: <span>{{mbti}}</span></h3>
+<h3>Your Global 5 Equivalent: <span>{{global5}}</span></h3>
 	<h2>Personality/Big 5</h2>
 		<ul>
 			<li ng-repeat="big5 in big5s">{{big5.name}}<p><small>{{big5.percentage*100 | number:0}}%</small></p></li>
 		</ul>
+
 </div>
