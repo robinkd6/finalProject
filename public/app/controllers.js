@@ -15,3 +15,14 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 	}
 
 }]);
+
+appCtrls.controller('signupCtrl', ['$scope', '$http', function($scope, $http){
+	$scope.firstName = null;
+	$scope.lastName = null;
+	$scope.email = null;
+	$scope.password = null;
+
+	$scope.signup = function(){
+		console.log($scope);
+	}
+}]);

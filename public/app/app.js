@@ -12,7 +12,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   	templateUrl: 'app/views/analyze.html'
   })
   .when('/signup', {
-    templateUrl: 'app/views/signup.html'
+    templateUrl: 'app/views/signup.html',
+    controller: 'signupCtrl'
   })
   .when('/login', {
     templateUrl: 'app/views/login.html'
