@@ -2,8 +2,8 @@
 .large-header {
 	position: relative;
 	width: 100%;
-	background: #333;
-	background-image: url('../img/overview.jpg');
+/*	background: #333;
+*/	background-image: url('../img/overview.jpg');
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
@@ -13,7 +13,18 @@
 .container coverPhoto {
 	width: 100%;
 }
-
+h3.how {
+	width: 170px;
+	height: 40px;
+	color: #ffffff;
+	padding-top: 6px;
+	padding-left: 12px;
+	margin-left: 490px;
+	background: rgba(255,255,255,0.5);
+	border-radius: 3%;
+	
+	z-index: 2;
+}
 .main-title {
 	position: absolute;
 	margin: 0;
