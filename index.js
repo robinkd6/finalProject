@@ -1,38 +1,40 @@
-var express = require('express'),
-	session = require('express-session'),
-	bodyParser = require('body-parser'),
-	path = require('path'),
-	passport = require('passport'),
-	config = require('./oauth.js'),
-	FacebookStrategy = require('passport-facebook').Strategy,
-	app = express();
+var express = require('express');
+var bodyParser = require('body-parser');
+var session = require('express-session');
+var passport = require('passport');
+var strategies = require('./config/strategies');
+var path = require('path');
+var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view-engine', 'ejs');
+app.use(bodyParser.json());
+app.use(session({ secret: process.env.PASSWORD, resave: false, saveUninitialized: true }));
+// Load middleware
+app.use(passport.initialize());
+app.use(passport.session());
+passport.serializeUser(strategies.serializeUser);
+passport.deserializeUser(strategies.deserializeUser);
+passport.use(strategies.localStrategy);
 
-app.get('/signup', function(req, res){
-  res.render('views/signup')
-  
-});
+app.use('/login', require('./routes/login.controller'));
+app.use('/signup', require('./routes/signup.controller'));
 
-app.get('/login', function(req, res){
- 
-});
 
 
 // config
-passport.use(new FacebookStrategy({
-  clientID: config.facebook.clientID,
-  clientSecret: config.facebook.clientSecret,
-  callbackURL: config.facebook.callbackURL
-  },
-  function(accessToken, refreshToken, profile, done) {
-    process.nextTick(function () {
-      return done(null, profile);
-    });
-  }
-));
+// passport.use(new FacebookStrategy({
+//   clientID: config.facebook.clientID,
+//   clientSecret: config.facebook.clientSecret,
+//   callbackURL: config.facebook.callbackURL
+//   },
+//   function(accessToken, refreshToken, profile, done) {
+//     process.nextTick(function () {
+//       return done(null, profile);
+//     });
+//   }
+// ));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));

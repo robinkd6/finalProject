@@ -1,11 +1,10 @@
 <div class="form-style-8">
   <h2>Sign Up</h2>
-  <form>
-    <input type="text" name="field1" placeholder="First Name" />
-    <input type="text" name="field1" placeholder="Last Name Name" />
-    <input type="email" name="field2" placeholder="Email" />
-    <input type="url" name="field3" placeholder="Password i.e. ILikeTurtles" />
-    <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+  <form ng-submit="signup()">
+    <input type="text" name="firstName" placeholder="First Name" ng-model="firstName" />
+    <input type="text" name="lastName" placeholder="Last Name" ng-model="lastName" />
+    <input type="email" name="email" placeholder="Email" ng-model="email" />
+    <input type="password" name="password" placeholder="Password i.e. ILikeTurtles" ng-model="password" />
     <input input type="submit" value="Sign Up" />
   </form>
 </div>

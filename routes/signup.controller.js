@@ -1,36 +1,29 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
-var config = require('config.json');
-
-router.get('/signup', function (req, res) {
-    res.render('hello');
-});
+var db  = require('../models');
 
 router.post('/', function (req, res) {
-    // register using api to maintain clean separation between layers
-    request.post({
-        url: config.apiUrl + '/users/signup',
-        form: req.body,
-        json: true
-    }, function (error, response, body) {
-        if (error) {
-            return res.render('register', { error: 'An error occurred' });
-        }
-
-        if (response.statusCode !== 200) {
-            return res.render('register', {
-                error: response.body,
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                username: req.body.username
-            });
-        }
-
-        // return to login page with success message
-        req.session.success = 'Registration successful';
-        return res.redirect('/login');
-    });
+    console.log('i made it!', req.body);
+    // db.user.findOrCreate({
+    //     where: {email: req.body.email},
+    //     defaults : {
+    //         password: req.body.password,
+    //         firstName: req.body.firstName,
+    //         lastName: req.body.lastName
+    //     }
+    // }).spread(function(user,created){
+    //     if(created){
+    //         req.login(user, function(err){
+    //             if(err) throw err;
+    //             res.send(200);
+    //         });
+    //     } else {
+    //         res.send(400);
+    //     }
+    // }).catch(function(err){
+    //     req.send(500);
+    // });
 });
 
 module.exports = router; 

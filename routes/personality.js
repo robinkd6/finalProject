@@ -19,7 +19,7 @@ router.route('/analyze/:summary')
 	personality_insights.profile({ text: my_profile },
 	function (err, profile) {
 	  if (err)
-	    res.send(err)
+	    res.send(err);
 	  else
 	  	res.send(profile.tree.children);
 	});
