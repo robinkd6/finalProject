@@ -1,6 +1,24 @@
 var appCtrls = angular.module('AppCtrls', []);
 appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $http){
-	$scope.hide = true;
+	$scope.hideAll = true;
+
+	$scope.showBig5 = function(){
+		$scope.hideBig5 = false;
+		$scope.hideNeeds = true;
+		$scope.hideValues = true;
+	}
+
+	$scope.showNeeds = function(){
+		$scope.hideBig5 = true;
+		$scope.hideNeeds = false;
+		$scope.hideValues = true;
+	}
+
+	$scope.showValues = function(){
+		$scope.hideBig5 = true;
+		$scope.hideNeeds = true;
+		$scope.hideValues = false;
+	}
 
 	$scope.analyze = function(){
 		var big5s = [];
@@ -15,7 +33,9 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 			if(Array.isArray(res.data)){
 				var global5 = '';
 				var mbti = '';
-				$scope.hide = false;
+				$scope.hideAll = false;
+				$scope.hideNeeds = true;
+				$scope.hideValues = true;
 				$scope.hideError = true;
 				var personality = res.data[0].children[0].children;
 				$scope.needs = res.data[1].children[0].children;
@@ -117,7 +137,7 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 				$scope.mbti = mbti;
 
 			} else if(!Array.isArray(res.data)){
-				$scope.hide = true;
+				$scope.hideAll = true;
 				$scope.hideError = false;
 				$scope.err = res.data.error;
 			}
