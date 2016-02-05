@@ -34,3 +34,22 @@ appCtrls.controller('signupCtrl', ['$scope', '$http', function($scope, $http){
 		console.log($scope);
 	}
 }]);
+//login controller 
+appCtrls.controller('loginCtrl', ['$scope', '$http', function($scope, $http) {
+	$scope.user = {};
+    $scope.loginUser=function()
+    {
+        var username=$scope.user.name;
+        var password=$scope.user.password;
+        if(username=="" && password=="")
+        {
+            page.setUser($scope.user);
+            $location.path( "/home" );
+        }
+        else
+        {
+            $scope.message="Error";
+            $scope.messagecolor="alert alert-danger";
+        }
+    };
+}]);

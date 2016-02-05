@@ -1,11 +1,19 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+// var routes = require('./routes');
+var models = require("./models");
 var session = require('express-session');
 var passport = require('passport');
 var strategies = require('./config/strategies');
 var path = require('path');
 var app = express();
 
+//use sequelize on bootup
+// var models.sequelize.sync().then(function() {
+//  var server = app.listen(app.get('port'), function() {
+//  console.log('Express server listening on port ' + server.address().port);
+//  });
+// });
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view-engine', 'ejs');
