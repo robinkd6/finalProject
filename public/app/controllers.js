@@ -1,6 +1,24 @@
 var appCtrls = angular.module('AppCtrls', []);
 appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $http){
-	$scope.hide = true;
+	$scope.hideAll = true;
+
+	$scope.showBig5 = function(){
+		$scope.hideBig5 = false;
+		$scope.hideNeeds = true;
+		$scope.hideValues = true;
+	}
+
+	$scope.showNeeds = function(){
+		$scope.hideBig5 = true;
+		$scope.hideNeeds = false;
+		$scope.hideValues = true;
+	}
+
+	$scope.showValues = function(){
+		$scope.hideBig5 = true;
+		$scope.hideNeeds = true;
+		$scope.hideValues = false;
+	}
 
 	$scope.analyze = function(){
 		var big5s = [];
@@ -15,7 +33,9 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 			if(Array.isArray(res.data)){
 				var global5 = '';
 				var mbti = '';
-				$scope.hide = false;
+				$scope.hideAll = false;
+				$scope.hideNeeds = true;
+				$scope.hideValues = true;
 				$scope.hideError = true;
 				var personality = res.data[0].children[0].children;
 				$scope.needs = res.data[1].children[0].children;
@@ -30,34 +50,34 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 
 				// Mapping Big 5 to Global 5
 				big5s.forEach(function(big5){
-					if(big5.name === 'Extraversion' && big5.percentage >= 50){
+					if(big5.name === 'Extraversion' && big5.percentage * 100 >= 50){
 						global5 = global5.concat('S');
 					}
-					else if(big5.name === 'Extraversion' && big5.percentage < 50){
+					else if(big5.name === 'Extraversion' && big5.percentage * 100 < 50){
 						global5 = global5.concat('R');
 					}
-					else if(big5.name === 'Emotional range' && big5.percentage >= 50){
+					else if(big5.name === 'Emotional range' && big5.percentage * 100 >= 50){
 						global5 = global5.concat('L');
 					}
-					else if(big5.name === 'Emotional range' && big5.percentage < 50){
+					else if(big5.name === 'Emotional range' && big5.percentage * 100 < 50){
 						global5 = global5.concat('C');
 					}
-					else if(big5.name === 'Conscientiousness' && big5.percentage >= 50){
+					else if(big5.name === 'Conscientiousness' && big5.percentage * 100 >= 50){
 						global5 = global5.concat('O');
 					}
-					else if(big5.name === 'Conscientiousness' && big5.percentage < 50){
+					else if(big5.name === 'Conscientiousness' && big5.percentage * 100 < 50){
 						global5 = global5.concat('U');
 					}
-					else if(big5.name === 'Agreeableness' && big5.percentage >= 50){
+					else if(big5.name === 'Agreeableness' && big5.percentage * 100 >= 50){
 						global5 = global5.concat('A');
 					}
-					else if(big5.name === 'Agreeableness' && big5.percentage < 50){
+					else if(big5.name === 'Agreeableness' && big5.percentage * 100 < 50){
 						global5 = global5.concat('E');
 					}
-					else if(big5.name === 'Openness' && big5.percentage >= 50){
+					else if(big5.name === 'Openness' && big5.percentage * 100 >= 50){
 						global5 = global5.concat('I');
 					}
-					else if(big5.name === 'Openness' && big5.percentage < 50){
+					else if(big5.name === 'Openness' && big5.percentage * 100 < 50){
 						global5 = global5.concat('N');
 					}
 				});
@@ -117,7 +137,7 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 				$scope.mbti = mbti;
 
 			} else if(!Array.isArray(res.data)){
-				$scope.hide = true;
+				$scope.hideAll = true;
 				$scope.hideError = false;
 				$scope.err = res.data.error;
 			}
