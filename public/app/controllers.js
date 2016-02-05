@@ -1,7 +1,6 @@
 var appCtrls = angular.module('AppCtrls', []);
 appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $http){
 	$scope.hide = true;
-	$scope.toggle = true;
 	$scope.hideAll = true;
 
 	$scope.showBig5 = function(){

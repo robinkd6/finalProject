@@ -23,7 +23,7 @@
       </div>
       <div ng-hide="hideBig5" class="tabContent">
     		<ul class="list">
-        <h3>Your Big 5</h3>
+          <h3>Your Big 5</h3>
     			<strong>
             <li ng-repeat="big5 in big5s">
               <div class="bar text-right" ng-style="{'width': big5.percentage * 70 + '%'}"></div>&nbsp<small>{{big5.percentage * 100 | number: 0}}%</small>
@@ -31,10 +31,10 @@
             </li>
           </strong>
     		</ul>
-      </div>
+      </div> <!-- hideBig5 -->
       <div ng-hide="hideNeeds" class="tabContent">
         <ul class="list">
-        <h3>Your Needs</h3>
+          <h3>Your Needs</h3>
           <strong>
             <li ng-repeat="need in needs">
               <div class="bar text-right" ng-style="{'width': need.percentage * 70 + '%'}"></div>&nbsp<small>{{need.percentage * 100 | number: 0}}%</small>
@@ -42,10 +42,10 @@
             </li>
           </strong>
         </ul>
-      </div>
+      </div> <!-- hideNeeds -->
       <div ng-hide="hideValues" class="tabContent">
         <ul class="list">
-        <h3>Your Values</h3>
+          <h3>Your Values</h3>
           <strong>
             <li ng-repeat="value in values">
               <div class="bar text-right" ng-style="{'width': value.percentage * 70 + '%'}"></div>&nbsp<small>{{value.percentage * 100 | number: 0}}%</small>
@@ -53,10 +53,8 @@
             </li>
           </strong>
         </ul>
-      </div>
-    </div>
+      </div> <!-- hideValues -->
+    </div> <!-- hideAll -->
+  </div>
   <div class="col-xs-0 col-md-2"></div>
-  <br><br>
-  <br><br>
-  <br><br>
 </div>
