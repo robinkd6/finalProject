@@ -1,7 +1,7 @@
 /* Header */
 .large-header {
 	position: relative;
-	width: 200%;
+	width: 110%;
 	height: 100%;
 /*	background: #333;*/
 /*	background-image: url('../img/overview.jpg');
@@ -10,6 +10,10 @@
 	background-position: center center;
 	z-index: 0;
 }
+/*div.box.on {
+	font-size: 15px;
+	display: inline;
+}*/
 div.container {
 	margin-left: 0px;
     padding-left: 0px;
@@ -207,30 +211,13 @@ button.howHook {
 }
 */
 
-
-#signupHooks {
+div.hook {
+	font-size: 14px;
 	display: inline-block;
-	width: 100%;
-	
-
-}
-.hook {
 /*	float: left;*/
 	border: 10px single black;
-	width: 55%;
+	width: 20%;
 }
-.hook2 {
-	/*position: left;*/
-	border: 10px single black;
-	margin-right: 2;
-	width: 75%;
-}
-.hook3 {
-	margin-right: 0;
-	border: 10px single black;
-	width:55%;
-}
-
 /* Navbar common style */ 
 nav {
 	 z-index: 2;
