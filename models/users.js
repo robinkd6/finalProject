@@ -17,6 +17,12 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [8, 99]
       }
+    },
+    dob: {
+      type: DataTypes.DATE,
+      validate: {
+        notEmpty: true
+      }
     }
   }, {
     classMethods: {
