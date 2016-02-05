@@ -1,0 +1,27 @@
+.personalityDiv {
+	font-family: Arial;
+	letter-spacing: 0.8px;
+	width: 80%;
+	margin: 0 auto;
+}
+ul.list {
+	list-style: none;
+}
+
+.bar {
+	display: inline-block;
+	background-color: #3AE2C8;
+	height: 20px;
+	line-height: 20px;
+	margin: 20px 0px;
+	vertical-align: middle;
+}
+
+#summaryText {
+	border-color: #3AE2C8;
+	border-width: 2px;
+	box-shadow: none;
+	border-radius: 0px;	
+	color: #2BA895;
+	/*width: 80%;*/
+}
