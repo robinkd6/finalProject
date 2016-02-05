@@ -1,8 +1,9 @@
 .personalityDiv {
 	font-family: Arial;
 	letter-spacing: 0.8px;
-	/*width: 80%;*/
 	margin: 0 auto;
+	margin-bottom: 80px;
+	padding: 5%;
 }
 
 ul.list {
