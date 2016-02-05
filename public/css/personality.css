@@ -14,15 +14,14 @@ ul.list li {
 }
 
 .bar {
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 5px;
 	display: inline-block;
 	height: 25px;
 	line-height: 25px;
 	margin: 10px 0px;
 	vertical-align: middle;
-	border-color: grey;
+	border-color: #3AE2C8;
+	border-style: solid;
+	border-width: 1px;	
 	background-color: #ADF0EB;
 }
 

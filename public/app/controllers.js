@@ -50,34 +50,34 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 
 				// Mapping Big 5 to Global 5
 				big5s.forEach(function(big5){
-					if(big5.name === 'Extraversion' && big5.percentage >= 50){
+					if(big5.name === 'Extraversion' && big5.percentage * 100 >= 50){
 						global5 = global5.concat('S');
 					}
-					else if(big5.name === 'Extraversion' && big5.percentage < 50){
+					else if(big5.name === 'Extraversion' && big5.percentage * 100 < 50){
 						global5 = global5.concat('R');
 					}
-					else if(big5.name === 'Emotional range' && big5.percentage >= 50){
+					else if(big5.name === 'Emotional range' && big5.percentage * 100 >= 50){
 						global5 = global5.concat('L');
 					}
-					else if(big5.name === 'Emotional range' && big5.percentage < 50){
+					else if(big5.name === 'Emotional range' && big5.percentage * 100 < 50){
 						global5 = global5.concat('C');
 					}
-					else if(big5.name === 'Conscientiousness' && big5.percentage >= 50){
+					else if(big5.name === 'Conscientiousness' && big5.percentage * 100 >= 50){
 						global5 = global5.concat('O');
 					}
-					else if(big5.name === 'Conscientiousness' && big5.percentage < 50){
+					else if(big5.name === 'Conscientiousness' && big5.percentage * 100 < 50){
 						global5 = global5.concat('U');
 					}
-					else if(big5.name === 'Agreeableness' && big5.percentage >= 50){
+					else if(big5.name === 'Agreeableness' && big5.percentage * 100 >= 50){
 						global5 = global5.concat('A');
 					}
-					else if(big5.name === 'Agreeableness' && big5.percentage < 50){
+					else if(big5.name === 'Agreeableness' && big5.percentage * 100 < 50){
 						global5 = global5.concat('E');
 					}
-					else if(big5.name === 'Openness' && big5.percentage >= 50){
+					else if(big5.name === 'Openness' && big5.percentage * 100 >= 50){
 						global5 = global5.concat('I');
 					}
-					else if(big5.name === 'Openness' && big5.percentage < 50){
+					else if(big5.name === 'Openness' && big5.percentage * 100 < 50){
 						global5 = global5.concat('N');
 					}
 				});
