@@ -1,20 +1,32 @@
 .personalityDiv {
 	font-family: Arial;
 	letter-spacing: 0.8px;
-	width: 80%;
+	/*width: 80%;*/
 	margin: 0 auto;
 }
+
 ul.list {
 	list-style: none;
 }
 
+ul.list li {
+	list-style-position: inside;
+}
+
 .bar {
 	display: inline-block;
-	background-color: #3AE2C8;
-	height: 20px;
-	line-height: 20px;
-	margin: 20px 0px;
+	height: 25px;
+	line-height: 25px;
+	margin: 10px 0px;
 	vertical-align: middle;
+	border-color: #3AE2C8;
+	border-style: solid;
+	border-width: 1px;	
+	background-color: #ADF0EB;
+}
+
+.barName {
+	padding-left: 13px;
 }
 
 #summaryText {
@@ -23,5 +35,5 @@ ul.list {
 	box-shadow: none;
 	border-radius: 0px;	
 	color: #2BA895;
-	/*width: 80%;*/
+	text-align: justify;
 }
