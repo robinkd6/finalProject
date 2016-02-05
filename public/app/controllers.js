@@ -1,6 +1,7 @@
 var appCtrls = angular.module('AppCtrls', []);
 appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $http){
 	$scope.hide = true;
+	$scope.toggle = true;
 
 	$scope.analyze = function(){
 		var big5s = [];

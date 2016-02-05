@@ -1,13 +1,16 @@
 <div id="large-header" class="large-header">
-	<canvas id="demo-canvas"></canvas>
-		<div class="howHook">
-	<h3 class="how"><a href="/signup" style="text-decoration: none; color: white">How it works</a></h3>
+	<div class="box on" ng-show="toggle" ng-animate="'box'">
+		
 	</div>
-	<h1 class="main-title">LinkUp</h1>
+	<canvas id="demo-canvas"></canvas>
+	<a class="link link--kukuri" href="#" data-letters="LinkUp" style="text-decoration: none; font-family: Raleway ">LinkUp</a>
+	<div class="howHook">
+		<button ng-click="toggle = !toggle" style="margin-left: 540px">How It Works</button>	
+	</div>
 </div>
 
-<script src="/app/js/TweenLite.min.js"></script>
-<script src="/pp/js/EasePack.min.js"></script>
+<script src="..app/js/TweenLite.min.js"></script>
+<script src="..app/js/EasePack.min.js"></script>
 <script src="..app/js/rAF.js"></script>
 <script src="./public/js/banner.js"></script>
 <script src="script.js"></script>

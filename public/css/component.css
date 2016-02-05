@@ -1,31 +1,103 @@
 /* Header */
 .large-header {
 	position: relative;
-	width: 100%;
-	height: 50%;
-/*	background: #333;
-*/	background-image: url('../img/city.jpg');
-	overflow: hidden;
+	width: 200%;
+	height: 100%;
+/*	background: #333;*/
+/*	background-image: url('../img/overview.jpg');
+*/	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
 	z-index: 0;
+}
+div.container {
+	margin-left: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	display: center;
+	font-size: 8em;
+	line-height: 1;
+	color: #9e9ba4;
+	display: inline-block;
+	margin-left: 90px;
+	padding-top: 100px;
+}
+.link--kukuri {
+	text-transform: uppercase;
+	font-weight: 900;
+	overflow: hidden;
+	line-height: 0.75;
+	color: #b2b0a9;
+}
+
+.link--kukuri:hover {
+	color: #b2b0a9;
+}
+
+.link--kukuri::after {
+	content: '';
+	position: absolute;gi
+	height: 16px;
+	width: 100%;
+	top: 50%;
+	margin-top: -8px;
+	right: 0;
+	background: #F9F9F9;
+	transform: translate3d(-100%,0,0);
+	transition: transform 0.4s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.link--kukuri:hover::after {
+	transform: translate3d(100%,0,0);
+}
+
+.link--kukuri::before {
+	content: attr(data-letters);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	color: #424242;
+	white-space: nowrap;
+	width: 0%;
+	transition: width 0.4s 0.3s;
+}
+
+.link--kukuri:hover::before {
+	width: 100%;
 }
 
 .container coverPhoto {
 	width: 100%;
 }
-h3.how {
+button.howHook {
 	width: 170px;
 	height: 40px;
 	color: #ffffff;
 	padding-top: 6px;
 	padding-left: 12px;
-	margin-left: 490px;
+	margin-left: 480px;
 	background: rgba(255,255,255,0.5);
 	border-radius: 3%;
 	
 	z-index: 2;
 }
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 8em;
+	line-height: 1;
+	color: #9e9ba4;
+	display: inline-block;
+}
+
 .main-title {
 	position: absolute;
 	margin: 0;
@@ -317,6 +389,25 @@ nav {
 	transition-delay: 0.2s;
 	 z-index: 2;
 }
+
+.box { color: white; text-align: center; height: 300px; width: 100%; font-size: 86px; }
+.on  { background-color: #ff5050; }
+.off { background-color: red; }
+
+
+.box-show-setup, .box-hide-setup {
+  -webkit-transition:all linear 0.3s;
+  -moz-transition:all linear 0.3s;
+  -ms-transition:all linear 0.3s;
+  -o-transition:all linear 0.3s;
+  transition:all linear 0.3s;
+}
+
+.box-show-setup { opacity:0; height: 0; }
+.box-show-setup.box-show-start { opacity:1; height: 100px; }
+
+.box-hide-setup { opacity:1; height: 0; }
+.box-hide-setup.box-hide-start { opacity:0; height: 100px; }
 
 
 
