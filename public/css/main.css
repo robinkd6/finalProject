@@ -1,0 +1,26 @@
+button:focus {
+	outline: none !important;
+}
+
+.btnDefault {
+	margin: 10px;
+	letter-spacing: 2px;
+	background-color: #3AE2C8;
+	/*font-weight: bold !important;*/
+	/*border-radius: 0% !important;*/
+	/*font-family: "Trebuchet MS", Helvetica, sans-serif;*/
+	padding: 8px 30px !important;
+	font-size: 15px !important;
+	/*text-transform: uppercase !important;*/
+}
+
+.btnDefault:hover {
+	background-color: #264037;
+	color: #3AE2C8 !important;
+}
+
+.btnDefault:active {
+	outline: none;
+	outline-style: none;
+	outline-width: 0;
+}

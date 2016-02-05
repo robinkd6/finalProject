@@ -1,20 +1,43 @@
-<h1>Write a summary about yourself, it could be anything</h1>
-<form ng-submit="analyze()">
-  <div class="form-group">
-    <label for="title">Preferably between 3,500 - 6,000 for accurate results. Minimum 100 wods.</label>
-    <textarea rows="10" cols="50" type="text" class="form-control" name="summary" ng-model="summary"></textarea>
-  </div>
-  <div ng-hide="hideError">{{err}}</div>
-  <p>Sample text:</p>
-  <p>Call me Ishmael. Some years ago-never mind how long precisely-having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off-then, I account it high time to get to sea as soon as I can.</p>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-<div ng-hide="hide">Here is your personality
-<h3>Your Myers Briggs Equivalent: <span>{{mbti}}</span></h3>
-<h3>Your Global 5 Equivalent: <span>{{global5}}</span></h3>
-	<h2>Personality/Big 5</h2>
-		<ul>
-			<li ng-repeat="big5 in big5s">{{big5.name}}<p><small>{{big5.percentage*100 | number:0}}%</small></p></li>
+<div class="personalityDiv">
+  <h1>Let us analyze your personality</h1>
+  <form ng-submit="analyze()">
+    <div class="form-group">
+      <label for="title">Write something about yourself, it could be anything. Preferably between 3,500 - 6,000 for the most accurate results. Minimum 100 words.</label>
+      <textarea rows="10" cols="20" type="text" class="form-control" id="summaryText" name="summary" ng-model="summary"></textarea>
+    </div>
+    <div ng-hide="hideError">{{err}}</div>
+    <button type="submit" class="btn btnDefault">submit</button>
+  </form>
+  <br>
+  <div ng-hide="hide">
+    <h1>Personality Insights &trade;</h1>
+    <h3>Your Big 5</h3>
+    <h3><small>Myers-Briggs Personality Type Equivalent: <span>{{mbti}}</span></small></h3>
+    <h3><small>Big 5 Personality Type Equivalent: <span>{{global5}}</span></small></h3>
+		<ul class="list">
+			<strong>
+        <li ng-repeat="big5 in big5s">{{big5.name}}
+          <div class="bar" ng-style="{'width': big5.percentage * 50 + '%'}"></div><span>&nbsp{{big5.percentage * 100 | number: 0}}%</span>
+        </li>
+      </strong>
 		</ul>
-
+    <br>
+    <h3>Your Needs</h3>
+    <ul class="list">
+      <strong>
+        <li ng-repeat="need in needs">{{need.name}}
+          <div class="bar" ng-style="{'width': need.percentage * 50 + '%'}"></div><span>&nbsp{{need.percentage * 100 | number: 0}}%</span>
+        </li>
+      </strong>
+    </ul>
+    <br>
+    <h3>Your Values</h3>
+    <ul class="list">
+      <strong>
+        <li ng-repeat="value in values">{{value.name}}
+          <div class="bar" ng-style="{'width': value.percentage * 50 + '%'}"></div><span>&nbsp{{value.percentage * 100 | number: 0}}%</span>
+        </li>
+      </strong>
+    </ul>
+  </div>
 </div>

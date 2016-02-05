@@ -1,10 +1,13 @@
 var appCtrls = angular.module('AppCtrls', []);
 appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $http){
 	$scope.hide = true;
-	
+
 	$scope.analyze = function(){
 		var big5s = [];
 		$scope.big5s = big5s;
+		$scope.needs = [];
+		$scope.values = [];
+
 		var req = {
 		  url: '/api/personality/analyze/'+$scope.summary
 		}
@@ -15,13 +18,18 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 				$scope.hide = false;
 				$scope.hideError = true;
 				var personality = res.data[0].children[0].children;
-				// console.log(personality);
+				$scope.needs = res.data[1].children[0].children;
+				$scope.values = res.data[2].children[0].children;
+
+				// Rearrange traits to conform to Global 5 pattern
 				big5s.push(personality[2]);
 				big5s.push(personality[4]);
 				big5s.push(personality[1]);
 				big5s.push(personality[3]);
 				big5s.push(personality[0]);
-				$scope.big5s.forEach(function(big5){
+
+				// Mapping Big 5 to Global 5
+				big5s.forEach(function(big5){
 					if(big5.name === 'Extraversion' && big5.percentage >= 50){
 						global5 = global5.concat('S');
 					}
@@ -56,6 +64,7 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 
 				$scope.global5 = global5;
 				
+				// Mapping Global 5 to Myers Briggs
 				if(global5 === 'RCUAI' || global5 === 'RLUAI' ) {
 					mbti = 'INFP';
 				}
