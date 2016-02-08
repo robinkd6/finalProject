@@ -4,7 +4,7 @@ var request = require('request');
 var db  = require('../models');
 
 router.post('/', function (req, res) {
-    console.log('i made it!', req.body);
+    console.log('Do I work?', req.body);
     db.user.findOrCreate({
         where: {email: req.body.email},
         defaults : {

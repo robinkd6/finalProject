@@ -1,5 +1,5 @@
-var appCtrls = angular.module('AppCtrls', []);
-appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $http){
+var appCtrls = angular.module('AppCtrls', ['app']);
+appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', function($scope, $http, UserService){
 	var resultJSON;
 	var big5s = [];
 	$scope.big5s = big5s;
@@ -12,19 +12,19 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 		$scope.hideBig5 = false;
 		$scope.hideNeeds = true;
 		$scope.hideValues = true;
-	}
+	};
 
 	$scope.showNeeds = function(){
 		$scope.hideBig5 = true;
 		$scope.hideNeeds = false;
 		$scope.hideValues = true;
-	}
+	};
 
 	$scope.showValues = function(){
 		$scope.hideBig5 = true;
 		$scope.hideNeeds = true;
 		$scope.hideValues = false;
-	}
+	};
 
 	$scope.analyze = function(){
 		var req = {
@@ -164,18 +164,26 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', function($scope, $htt
 	}
 }]);
 
-appCtrls.controller('signupCtrl', ['$scope', '$http', function($scope, $http){
+appCtrls.controller('signupCtrl', ['$scope', '$http', 'UserService', function($scope, $http, UserService){
 	$scope.firstName = null;
 	$scope.lastName = null;
 	$scope.email = null;
 	$scope.password = null;
 
 	$scope.signup = function(){
+		var usrObj = {
+			firstName: $scope.firstName,
+			lastName: $scope.lastName,
+			email: $scope.email,
+			password: $scope.password
+		}
+
+		UserService.create(usrObj);
 		console.log($scope);
 	}
 }]);
 //login controller 
-appCtrls.controller('loginCtrl', ['$scope', '$http', function($scope, $http) {
+appCtrls.controller('loginCtrl', ['$scope', '$http', 'UserService', function($scope, $http, UserService) {
 	$scope.user = {};
     $scope.loginUser=function()
     {
@@ -193,3 +201,5 @@ appCtrls.controller('loginCtrl', ['$scope', '$http', function($scope, $http) {
         }
     };
 }]);
+
+
