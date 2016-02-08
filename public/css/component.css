@@ -8,7 +8,7 @@
 	background-image: url("../img/Link.png");
 	background-repeat: no-repeat;
 	background-position: top;
-	background-size: 250px 260px;
+	background-size: 250px 265px;
 	z-index: 0;
 	background-color: #113743;
 }
@@ -292,19 +292,22 @@ footer {
 }
 
 footer span.copyright {
-  line-height: 10px;
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 40px;
+  font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  text-transform: none
+  text-transform: none;
+  color: #EFEEEE;
+  margin-right: 25%;
+  padding-top: 2%;
 }
 
 footer ul.quicklinks {
   margin-bottom: 0;
   line-height: 40px;
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-transform: none;
-  margin-left: 70%;
+  margin-left: 32%;
 }
 @media only screen and (max-width : 768px) {
 	.demo-1 .main-title, 

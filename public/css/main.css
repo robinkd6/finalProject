@@ -28,7 +28,7 @@ button:focus {
 	border-style: solid;
 	border-width: 2px;
 	border-bottom-style: none;
-	border-color: #f49a7f;
+	border-color: #000000;
 	margin-right: -7px;
 	padding: 10px 30px;
 	display: inline;
@@ -52,7 +52,7 @@ button:focus {
 	width: 100%;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #f49a7f;
+	border-color: #000000;
 	margin-top: 0px;
 	padding: 15px;
 	border-radius: 13px;
