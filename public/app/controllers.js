@@ -1,5 +1,5 @@
 var appCtrls = angular.module('AppCtrls', ['app']);
-appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', function($scope, $http, UserService){
+appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', 'angularSlideables', function($scope, $http, UserService, angularSlideables){
 	$scope.hide = true;
 	$scope.hideAll = true;
 
