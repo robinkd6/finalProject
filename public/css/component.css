@@ -8,7 +8,7 @@
 	background-image: url("../img/Link.png");
 	background-repeat: no-repeat;
 	background-position: top;
-	background-size: 250px 265px;
+	background-size: 220px 245px;
 	z-index: 0;
 	background-color: #113743;
 }
@@ -55,12 +55,16 @@ div.container {
 }
 
 p.maintitle {
-	font-size: 102px;
+	font-size: 142px;
+	font-family: 'Quicksand-bold', 'Futura';
+	font-weight: 800;
 	position: relative;
-	margin-left: 37%;
-	margin-top: 6%;
+	margin-left: 32%;
+	position: center;
+	margin-top: 4%;
 	font-weight: 500;
 	color: #FFFFFF;
+	letter-spacing: -10px;
 }
 
 button.howHook {
@@ -69,7 +73,7 @@ button.howHook {
 	color: #ffffff;
 	padding-top: 40%;
 	padding-left: 12px;
-	margin-left: 480px;
+	margin-left: 475px;
 	background: rgba(255,255,255,0.5);
 	border-radius: 3%;
 	
@@ -296,7 +300,7 @@ footer span.copyright {
   text-transform: uppercase;
   text-transform: none;
   color: #b5b5b5;
-  margin-right: 25%;
+  margin-right: 20%;
   padding-top: 2%;
 }
 
