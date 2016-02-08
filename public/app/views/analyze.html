@@ -1,4 +1,4 @@
-<div class="row personalityDiv">
+<div class="row container personalityDiv">
   <div class="col-xs-0 col-md-2"></div>
   <div class="col-xs-12 col-md-8">
     <h1>Analyze</h1>
@@ -7,54 +7,61 @@
         <label for="title">With IBM Watson's help, let us analyze your personality. Write something about yourself, it could be anything. Preferably between 3,500 - 6,000 for the most accurate results. Minimum 100 words.</label>
         <textarea rows="10" cols="20" type="text" class="form-control" id="summaryText" name="summary" ng-model="summary" style="border-color: black; color: black"></textarea>
       </div>
-      <div ng-hide="hideError">{{err}}</div>
+      <div ng-hide="hideError">{{ err }}</div>
       <button type="reset" class="btn btnDefault">clear</button>
       <button type="submit" class="btn btnDefault">analyze</button>
     </form>
     <br>
-    <div ng-hide="hideAll">
-      <h1>Personality Insights&trade;</h1>
-      <h3><small>Myers-Briggs Personality Type Equivalent: <span>{{mbti}}</span></small></h3>
-      <h3><small>Big 5 Personality Type Equivalent: <span>{{global5}}</span></small></h3>
-      <div>
-        <button ng-click="showBig5()" class="tab">Big 5</button>
-        <button ng-click="showNeeds()" class="tab">Needs</button>
-        <button ng-click="showValues()" class="tab">Values</button>
-      </div>
-      <div ng-hide="hideBig5" class="tabContent">
-    		<ul class="list">
+    <form ng-submit="saveResult()">
+      <div ng-hide="hideAll">
+        <h1>Personality Insights&trade;</h1>
+        <h3><small>Myers-Briggs Personality Type Equivalent: <span>{{ mbti }}</span></small></h3>
+        <h3><small>Big 5 Personality Type Equivalent: <span>{{ global5 }}</span></small></h3>
+        <div>
+          <button ng-click="showBig5()" class="tab">Big 5</button>
+          <button ng-click="showNeeds()" class="tab">Needs</button>
+          <button ng-click="showValues()" class="tab">Values</button>
+        </div>
+        <div ng-hide="hideBig5" class="tabContent">
+      		<ul class="list">
           <h3>Your Big 5</h3>
-    			<strong>
-            <li ng-repeat="big5 in big5s">
-              <div class="bar text-right" ng-style="{'width': big5.percentage * 70 + '%'}"></div>&nbsp<small>{{big5.percentage * 100 | number: 0}}%</small>
-              <span>{{big5.name}}</span>
-            </li>
-          </strong>
-    		</ul>
-      </div> <!-- hideBig5 -->
-      <div ng-hide="hideNeeds" class="tabContent">
-        <ul class="list">
+      			<strong>
+              <li ng-repeat="big5 in big5s">
+                <div class="bar text-right" ng-style="{'width': big5.percentage * 70 + '%'}"></div>&nbsp<small>{{ big5.percentage * 100 | number: 0 }}%</small>
+                <span>{{ big5.name }}</span>
+                <input type="hidden" name="{{big5.name}}" value="{{big5.percentage}}">
+              </li>
+            </strong>
+      		</ul>
+        </div>
+        <div ng-hide="hideNeeds" class="tabContent">
+          <ul class="list">
           <h3>Your Needs</h3>
-          <strong>
-            <li ng-repeat="need in needs">
-              <div class="bar text-right" ng-style="{'width': need.percentage * 70 + '%'}"></div>&nbsp<small>{{need.percentage * 100 | number: 0}}%</small>
-              <span>{{need.name}}</span>
-            </li>
-          </strong>
-        </ul>
-      </div> <!-- hideNeeds -->
-      <div ng-hide="hideValues" class="tabContent">
-        <ul class="list">
+            <strong>
+              <li ng-repeat="need in needs">
+                <div class="bar text-right" ng-style="{'width': need.percentage * 70 + '%'}"></div>&nbsp<small>{{ need.percentage * 100 | number: 0 }}%</small>
+                <span>{{need.name}}</span>
+              </li>
+            </strong>
+          </ul>
+        </div>
+        <div ng-hide="hideValues" class="tabContent">
+          <ul class="list">
           <h3>Your Values</h3>
-          <strong>
-            <li ng-repeat="value in values">
-              <div class="bar text-right" ng-style="{'width': value.percentage * 70 + '%'}"></div>&nbsp<small>{{value.percentage * 100 | number: 0}}%</small>
-              <span>{{value.name}}</span>
-            </li>
-          </strong>
-        </ul>
-      </div> <!-- hideValues -->
-    </div> <!-- hideAll -->
+            <strong>
+              <li ng-repeat="value in values">
+                <div class="bar text-right" ng-style="{'width': value.percentage * 70 + '%'}"></div>&nbsp<small>{{ value.percentage * 100 | number: 0 }}%</small>
+                <span>{{value.name}}</span>
+              </li>
+            </strong>
+          </ul>
+        </div>
+        <!-- if logged in... -->
+        <button type="submit" class="btn btnDefault">save</button>
+        <!-- if not logged in... -->
+        <!-- <button type="submit" class="btn btnDefault">login to save</button> -->
+      </div>
+    </form>
   </div>
   <div class="col-xs-0 col-md-2"></div>
 </div>

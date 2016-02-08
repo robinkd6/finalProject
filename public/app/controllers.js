@@ -1,5 +1,10 @@
 var appCtrls = angular.module('AppCtrls', ['app']);
 appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', function($scope, $http, UserService){
+	var resultJSON;
+	var big5s = [];
+	$scope.big5s = big5s;
+	$scope.needs = [];
+	$scope.values = [];
 	$scope.hide = true;
 	$scope.hideAll = true;
 
@@ -22,25 +27,21 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 	};
 
 	$scope.analyze = function(){
-		var big5s = [];
-		$scope.big5s = big5s;
-		$scope.needs = [];
-		$scope.values = [];
-
 		var req = {
 		  url: '/api/personality/analyze/'+$scope.summary
 		}
 		$http(req).then(function success(res) {
-			if(Array.isArray(res.data)){
+			if(Array.isArray(res.data.tree.children)){
+				// resultJSON = JSON.stringify(res);
 				var global5 = '';
 				var mbti = '';
 				$scope.hideAll = false;
 				$scope.hideNeeds = true;
 				$scope.hideValues = true;
 				$scope.hideError = true;
-				var personality = res.data[0].children[0].children;
-				$scope.needs = res.data[1].children[0].children;
-				$scope.values = res.data[2].children[0].children;
+				var personality = res.data.tree.children[0].children[0].children;
+				$scope.needs = res.data.tree.children[1].children[0].children;
+				$scope.values = res.data.tree.children[2].children[0].children;
 
 				// Rearrange traits to conform to Global 5 pattern
 				big5s.push(personality[2]);
@@ -136,12 +137,29 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 				}
 
 				$scope.mbti = mbti;
-
-			} else if(!Array.isArray(res.data)){
+			} else if(!Array.isArray(res.data.tree.children)){
 				$scope.hideAll = true;
 				$scope.hideError = false;
 				$scope.err = res.data.error;
 			}
+		});
+	}
+
+	$scope.saveResult = function(){
+		console.log('moo from clicking save');
+		// var req = {
+		// 	url: '/api/personality/save',
+		// 	method: 'post'
+		// }
+		var testResult = {
+			test: 'abc'
+		};
+		$http.post('/api/personality/save', testResult).then(function success(res){
+			console.log('moo from http success');
+			console.log('success --- ' + res);
+		})
+		.catch(function(res){
+			console.log('failed --- ' + res);
 		});
 	}
 }]);
