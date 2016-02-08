@@ -24,12 +24,14 @@ div.container {
 	color: white;
 	text-align: center; 
 	height: 420px; 
-	width: 100%; 
+	width: 118%; 
 	font-size: 82px; 
 	z-index: -1;
+	transition:all linear 1.3s;
 }
-.on  { 
+.on-hide { 
 	background-color: #f49a7f;
+	transition:all linear 1.3s;
 }
 .off { 
 	background-color: black; 
@@ -37,11 +39,8 @@ div.container {
 
 
 .box-show, .box-hide {
-  -webkit-transition:all linear 1.3s;
-  -moz-transition:all linear 1.3s;
-  -ms-transition:all linear 1.3s;
-  -o-transition:all linear 1.3s;
-  transition:all linear 1.3s;
+ -webkit-transition:all linear 1.0s;
+  transition:all linear 0.5s;
 }
 
 .box-show-setup { opacity:0; height: 0; }
@@ -217,8 +216,8 @@ nav {
 }
 
 .menu__link {
-	font-size: 1.05em;
-	font-weight: bold;
+	/*font-size: 1.05em;*/
+	font-weight: 100;
 	display: block;
 	padding: 1em;
 	cursor: pointer;
@@ -296,7 +295,7 @@ footer span.copyright {
   font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-transform: none;
-  color: #EFEEEE;
+  color: #b5b5b5;
   margin-right: 25%;
   padding-top: 2%;
 }
