@@ -20,10 +20,10 @@ ul.list li {
 	line-height: 25px;
 	margin: 10px 0px;
 	vertical-align: middle;
-	border-color: #3AE2C8;
+	border-color: black;
 	border-style: solid;
 	border-width: 1px;	
-	background-color: #ADF0EB;
+	background-color: #ffab62;
 }
 
 .barName {
@@ -31,7 +31,7 @@ ul.list li {
 }
 
 #summaryText {
-	border-color: #3AE2C8;
+	border-color:#ffab62;
 	border-width: 2px;
 	box-shadow: none;
 	border-radius: 0px;	

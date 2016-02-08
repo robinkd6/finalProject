@@ -5,7 +5,7 @@
     <form ng-submit="analyze()">
       <div class="form-group">
         <label for="title">With IBM Watson's help, let us analyze your personality. Write something about yourself, it could be anything. Preferably between 3,500 - 6,000 for the most accurate results. Minimum 100 words.</label>
-        <textarea rows="10" cols="20" type="text" class="form-control" id="summaryText" name="summary" ng-model="summary"></textarea>
+        <textarea rows="10" cols="20" type="text" class="form-control" id="summaryText" name="summary" ng-model="summary" style="border-color: black; color: black"></textarea>
       </div>
       <div ng-hide="hideError">{{err}}</div>
       <button type="reset" class="btn btnDefault">clear</button>

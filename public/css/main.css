@@ -5,9 +5,12 @@ button:focus {
 .btnDefault {
 	margin: 10px;
 	letter-spacing: 2px;
-	background-color: #3AE2C8;
+	background-color: #f49a7f;
+	margin-top: 0px;
 	padding: 8px 30px !important;
 	font-size: 15px !important;
+	color: #FFFFFF;
+	font-family: 'Futura';
 }
 
 .btnDefault:hover,.btnDefault:active {
@@ -16,6 +19,7 @@ button:focus {
 	outline: none;
 	outline-style: none;
 	outline-width: 0;
+	
 }
 
 .tab {
@@ -24,7 +28,7 @@ button:focus {
 	border-style: solid;
 	border-width: 2px;
 	border-bottom-style: none;
-	border-color: #3AE2C8;
+	border-color: #ff6666;
 	margin-right: -7px;
 	padding: 10px 30px;
 	display: inline;
@@ -37,10 +41,10 @@ button:focus {
 }
 
 .tab:focus,.tab:active {
-	background-color: #3AE2C8;
+	background-color: #ff6666;
 }
 .tab:hover {
-	border-color: #ADF0EB;
+	border-color: #ff6666;
 	background-color: #ADF0EB;
 }
 
@@ -48,7 +52,7 @@ button:focus {
 	width: 100%;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #3AE2C8;
+	border-color: #ff6666;
 	margin-top: 0px;
 	padding: 15px;
 	border-radius: 13px;
