@@ -21,9 +21,15 @@ router.route('/analyze/:summary')
 	  if (err)
 	    res.send(err);
 	  else
-	  	res.send(profile.tree.children);
+	  	res.send(profile);
 	});
+});
 
+router.route('/save')
+.post(function(req, res) {
+	console.log('moo from express controller');
+	console.log('req---- ' + req);
+	res.send(req);
 });
 
 module.exports = router;
