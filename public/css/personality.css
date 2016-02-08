@@ -23,7 +23,7 @@ ul.list li {
 	border-color: black;
 	border-style: solid;
 	border-width: 1px;	
-	background-color: #ffab62;
+	background-color: #f49a7f;
 }
 
 .barName {
@@ -31,10 +31,10 @@ ul.list li {
 }
 
 #summaryText {
-	border-color:#ffab62;
+	border-color:#f49a7f;
 	border-width: 2px;
 	box-shadow: none;
 	border-radius: 0px;	
-	color: #2BA895;
+	color: #f49a7f;
 	text-align: justify;
 }

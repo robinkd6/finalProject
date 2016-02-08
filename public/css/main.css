@@ -28,7 +28,7 @@ button:focus {
 	border-style: solid;
 	border-width: 2px;
 	border-bottom-style: none;
-	border-color: #ff6666;
+	border-color: #f49a7f;
 	margin-right: -7px;
 	padding: 10px 30px;
 	display: inline;
@@ -41,18 +41,18 @@ button:focus {
 }
 
 .tab:focus,.tab:active {
-	background-color: #ff6666;
+	background-color: #f49a7f;
 }
 .tab:hover {
-	border-color: #ff6666;
-	background-color: #ADF0EB;
+	border-color: #f49a7f;
+	background-color: #f49a7f;
 }
 
 .tabContent {
 	width: 100%;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #ff6666;
+	border-color: #f49a7f;
 	margin-top: 0px;
 	padding: 15px;
 	border-radius: 13px;
