@@ -2,11 +2,14 @@ var appCtrls = angular.module('AppCtrls', ['app']);
 appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', function($scope, $http, UserService){
 	var resultJSON;
 	var big5s = [];
+	var global5 = '';
+	var mbti = '';
 	$scope.big5s = big5s;
 	$scope.needs = [];
 	$scope.values = [];
 	$scope.hide = true;
 	$scope.hideAll = true;
+	$scope.hideSaveMsg = true;
 
 	$scope.showBig5 = function(){
 		$scope.hideBig5 = false;
@@ -28,13 +31,12 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 
 	$scope.analyze = function(){
 		var req = {
-		  url: '/api/personality/analyze/'+$scope.summary
+		  url: '/api/personality/analyze/' + $scope.summary
 		}
 		$http(req).then(function success(res) {
-			if(Array.isArray(res.data.tree.children)){
-				// resultJSON = JSON.stringify(res);
-				var global5 = '';
-				var mbti = '';
+			if(res.data.tree){
+				console.log(res.data);
+				resultJSON = JSON.stringify(res);
 				$scope.hideAll = false;
 				$scope.hideNeeds = true;
 				$scope.hideValues = true;
@@ -137,7 +139,8 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 				}
 
 				$scope.mbti = mbti;
-			} else if(!Array.isArray(res.data.tree.children)){
+			} else if(res.data.error){
+				console.log(res.data.error);
 				$scope.hideAll = true;
 				$scope.hideError = false;
 				$scope.err = res.data.error;
@@ -146,20 +149,15 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 	}
 
 	$scope.saveResult = function(){
-		console.log('moo from clicking save');
-		// var req = {
-		// 	url: '/api/personality/save',
-		// 	method: 'post'
-		// }
-		var testResult = {
-			test: 'abc'
-		};
-		$http.post('/api/personality/save', testResult).then(function success(res){
-			console.log('moo from http success');
-			console.log('success --- ' + res);
+		// console.log(resultJSON);
+
+		$http.post('/api/personality/save', resultJSON)
+		.then(function success(res){
+			$scope.hideSaveMsg = false;
+			$scope.alert = 'Your personality results had been saved successfully.';
 		})
 		.catch(function(res){
-			console.log('failed --- ' + res);
+			console.log('failed --- ', res);
 		});
 	}
 }]);
