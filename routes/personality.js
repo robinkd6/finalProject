@@ -27,9 +27,7 @@ router.route('/analyze/:summary')
 
 router.route('/save')
 .post(function(req, res) {
-	console.log('moo from express controller');
-	console.log('req---- ' + req);
-	res.send(req);
+	res.send(req.body);
 });
 
 module.exports = router;
