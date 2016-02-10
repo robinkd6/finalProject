@@ -22,7 +22,7 @@ router.route('/signup')
         if (created) {
           req.login(user, function(err) {
             if (err) throw err;
-            req.flash('success', 'You are signed up and logged in.')
+            req.flash('success', 'You are signed up and logged in.');
             res.redirect('/');
           });
         } else {
