@@ -5,14 +5,16 @@ var db  = require('../models');
 
 router.post('/', function (req, res) {
     console.log('Yes, I work', req.body);
+    //var newDob = new Date(req.body.dob);
     db.user.findOrCreate({
         where: {email: req.body.email},
         defaults : {
             password: req.body.password,
             firstName: req.body.firstName,
-            lastName: req.body.lastName
+            lastName: req.body.lastName,
+            dob: req.body.dob
         }
-    }).spread(function(user,created){
+    }).spread(function(user, created){
         console.log('created ----------------- '+ created);
         if(created){
             req.login(user, function(err){
@@ -22,13 +24,13 @@ router.post('/', function (req, res) {
                 res.send(200);
             });
         } else {
-            res.send(400);
+            res.sendStatus(400);
         }
-    });
-    // .catch(function(err){
+    })
+    .catch(function(err){
         // console.log('WTF');
-        // res.sendStatus(500);
-    // });
+        res.sendStatus(500);
+    });
 });
 
 module.exports = router; 

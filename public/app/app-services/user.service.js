@@ -2,33 +2,35 @@ angular.module('app', [])
     .factory('UserService', ['$http', function($http) {
         return  {
             getCurrent: function() {
-                return $http.get('/api/users/current').then(this.handleSuccess, handleError);                    
+                return $http.get('/users/current').then(this.handleSuccess, this.handleError);                    
             },
             getAll: function() {
-                return $http.get('/api/users').then(this.handleSuccess, handleError);
+                return $http.get('/users').then(this.handleSuccess, this.handleError);
             },
             getById: function(_id) {
-                return $http.get('/api/users/' + _id).then(this.handleSuccess, handleError);
+                return $http.get('/users/' + _id).then(this.handleSuccess, this.handleError);
             },
             getByUsername: function(username) {
-                 return $http.get('/api/users/' + username).then(this.handleSuccess, handleError);
+                 return $http.get('/users/' + username).then(this.handleSuccess, this.handleError);
             },
             create: function(user) {
-                 return $http.post('/signup', user).then(this.handleSuccess, this.handleError);
+                 return $http.post('/signup', user).then(this.handleSuccess, function success(res){console.log(res)});
             },
             update: function(user) {
-                return $http.put('/api/users/' + user._id, user).then(this.handleSuccess, handleError);
+                return $http.put('/users/' + user._id, user).then(this.handleSuccess, this.handleError);
             },
             delete: function(_id) {
-                return $http.delete('/api/users/' + _id).then(this.handleSuccess, handleError);
+                return $http.delete('/users/' + _id).then(this.handleSuccess, this.handleError);
             },
             handleSuccess: function() {
-                console.log('hi', res);
+                console.log('success');
+                console.log('Adele');
             // return res.data;
 
             },
-            handleError: function() {
-             return $q.reject(res.data);
+            handleError: function(res) {
+                console.log('error', res)
+             //return res.reject(res.data);
 
             }
         };
