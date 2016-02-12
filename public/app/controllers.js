@@ -199,7 +199,8 @@ appCtrls.controller('signupCtrl', ['$scope', '$http', 'UserService', function($s
 			firstName: $scope.firstName,
 			lastName: $scope.lastName,
 			email: $scope.email,
-			password: $scope.password
+			password: $scope.password,
+			dob: $scope.dob
 		}
 
 		UserService.create(usrObj);
