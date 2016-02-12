@@ -1,21 +1,9 @@
-<div class="row container personalityDiv">
+<div class="row container personalityDiv" data-ng-init="getResult()">
   <div class="col-xs-0 col-md-2"></div>
   <div class="col-xs-12 col-md-8">
-    <h1>Analyze</h1>
-    <!-- <form ng-submit="analyze()"> -->
-      <div class="form-group">
-        <label for="title">With IBM Watson's help, let us analyze your personality. Write something about yourself, it could be anything. Preferably between 3,500 - 6,000 for the most accurate results. Minimum 100 words.</label>
-        <textarea rows="10" cols="20" type="text" class="form-control" id="summaryText" name="summary" ng-model="summary" style="border-color: black; color: black"></textarea>
-        <!-- Number of words: <span ng-bind="wordCount(summary)"></span> -->
-      </div>
-      <div ng-hide="hideError">{{ err }}</div>
-      <button type="reset" class="btn btnDefault">clear</button>
-      <button type="submit" class="btn btnDefault" ng-click="analyze(summary)">analyze</button>
-    <!-- </form> -->
-    <br>
-    <form ng-submit="saveResult()">
+    <h1>Your Profile</h1>
       <div ng-hide="hideAll">
-        <h1>Personality Insights&trade;</h1>
+        <!-- <h1>Personality Insights&trade;</h1> -->
         <h3><small>Myers-Briggs Personality Type Equivalent: <span>{{ mbti }}</span></small></h3>
         <h3><small>Big 5 Personality Type Equivalent: <span>{{ global5 }}</span></small></h3>
         <div>
@@ -57,13 +45,7 @@
             </strong>
           </ul>
         </div>
-        <!-- if logged in... -->
-        <button type="submit" class="btn btnDefault">save</button>
-        <!-- if not logged in... -->
-        <!-- <button type="submit" class="btn btnDefault">login to save</button> -->
-        <span ng-hide="hideSaveMsg">{{alert}}</span>
       </div>
-    </form>
   </div>
   <div class="col-xs-0 col-md-2"></div>
 </div>
