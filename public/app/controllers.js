@@ -175,7 +175,7 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 	// profile page init load function
 	$scope.getResult = function(){
 		var req = {
-			url: '/api/personality/' + 9
+			url: '/api/personality/' + 1
 		}
 		$http(req).then(function success(res) {
 			var parsed = JSON.parse(res.data.data);
