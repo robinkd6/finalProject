@@ -1,4 +1,4 @@
-<div class="row container personalityDiv" data-ng-init="getResult()">
+<div class="row container personalityDiv" data-ng-init="getResult();getMarathonEvents();getPhotographyEvents()">
   <div class="col-xs-0 col-md-2"></div>
   <div class="col-xs-12 col-md-8">
     <h1>Your Profile</h1>
@@ -47,5 +47,48 @@
         </div>
       </div>
   </div>
+  <div class="col-xs-0 col-md-2"></div>
+</div>
+<h2 class="text-center">Recommended Activities</h2>
+<h4 class="text-center">according to your personality test result</h4>
+<div class="row container eventDiv">
+  	<div class="col-xs-0 col-md-2"></div>
+  		<div class="col-xs-12 col-md-8 text-center">
+  		<h2 class=text-center>Marathon</h2>
+			<ul>
+				<li>
+					<div class="eventBox well text-center" ng-repeat="marathon in marathons">
+						<a target="_blank" class="btn" href="{{marathon.url}}">
+							<img src="{{marathon.logo.url}}"></a>
+							<p><strong>{{marathon.name.text}}</strong></p>
+							<p>Date and Time : {{marathon.start.local}}</p>
+							<p>Your friends who might be interested : Casey Hills, Mandy Keller, Jo Keller</p>
+						</a>
+						<button class="btn btnDefault">Message them!</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+  <div class="col-xs-0 col-md-2"></div>
+</div>
+
+<div class="row container eventDiv">
+  	<div class="col-xs-0 col-md-2"></div>
+  		<div class="col-xs-12 col-md-8 text-center">
+  		<h2 class=text-center>Photography</h2>
+			<ul>
+				<li>
+					<div class="eventBox well text-center" ng-repeat="photo in photography | limitTo:5">
+						<a target="_blank" class="btn" href="{{photo.url}}">
+							<img src="{{photo.logo.url}}"></a>
+							<p><strong>{{photo.name.text}}</strong></p>
+							<p>Date and Time : {{photo.start.local}}</p>
+							<p>Your friends who might be interested : David Keller, Amanda Schumer, Kelly Long</p>
+						</a>
+						<button class="btn btnDefault">Message them!</button>
+					</div>
+				</li>
+			</ul>
+		</div>
   <div class="col-xs-0 col-md-2"></div>
 </div>

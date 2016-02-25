@@ -7,6 +7,8 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 	$scope.big5s = big5s;
 	$scope.needs = [];
 	$scope.values = [];
+	$scope.marathons = [];
+	$scope.photography = [];
 	$scope.hide = true;
 	$scope.hideAll = true;
 	$scope.hideSaveMsg = true;
@@ -175,7 +177,7 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 	// profile page init load function
 	$scope.getResult = function(){
 		var req = {
-			url: '/api/personality/' + 9
+			url: '/api/personality/' + 1
 		}
 		$http(req).then(function success(res) {
 			var parsed = JSON.parse(res.data.data);
@@ -185,6 +187,42 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 			console.log(res);
 		});
 	}
+
+	$scope.getMarathonEvents = function(){
+        var req = {
+          url: "https://www.eventbriteapi.com/v3/events/search/?q=marathon&sort_by=date&venue.city=seattle&token=H7RQ4AALH3XDVOVNJGJJ"
+        };
+        $http(req).success(function(data){      
+        console.log(data.events);  
+            if(data){
+                $scope.marathons = data.events;
+            }else{
+                $scope.marathons=[];
+            }
+
+        })
+        .catch(function(data){
+        	console.log("error");
+        });
+    }
+
+  $scope.getPhotographyEvents = function(){
+      var req = {
+        url: "https://www.eventbriteapi.com/v3/events/search/?q=photography&sort_by=date&venue.city=seattle&token=H7RQ4AALH3XDVOVNJGJJ"
+      };
+      $http(req).success(function(data){      
+      console.log(data.events);  
+          if(data){
+              $scope.photography = data.events;
+          }else{
+              $scope.photography=[];
+          }
+
+      })
+      .catch(function(data){
+      	console.log("error");
+      });
+  }
 
 }]);
 
