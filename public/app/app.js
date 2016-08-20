@@ -19,6 +19,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: 'app/views/login.html',
     controller: 'loginCtrl'
   })
+
   .otherwise({
     templateUrl: 'app/views/404.html'
   });

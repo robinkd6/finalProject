@@ -8,69 +8,76 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css">
 		<link rel="stylesheet" type="text/css" href="css/personality.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="shortcut icon" type="image/x-icon" href="img/link2.png">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" type="text/css" href="css/personality.css" />
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
-	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
-		<script src="app/controllers.js"></script>		
-		<script src="app/app.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="app/app-services/user.service.js"></script>
 	</head>
 	<body>
-		<div class="content">
-
-		 <!-- Navigation -->
-		<nav class="menu menu--antonio" style="font-family: Futura; letter-spacing: 2px">
-			<ul class="menu__list">
-				<li class="menu__item menu__item--current"><a href="/" class="menu__link">Home</a></li>
-				<li class="menu__item"><a href="/analyze" class="menu__link">Analyze</a></li>
-				<li class="menu__item"><a href="/signup" class="menu__link">Signup</a></li>
-				<li class="menu__item"><a href="/login" class="menu__link">Login</a></li>
-			</ul>
-		</nav>
-
-		 </div>     
+	d
+	<!-- Navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Know Yourself</a>
+		    </div>
+		    <div id="navbar" class="collapse navbar-collapse">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Home</a></li>
+		        <li><a href="/about">About</a></li>
+		        <li><a href="/analyze">Analyze</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="/signup">Signup  <i class="fa fa-user-plus"></i></a></li>
+		        <li><a href="/login">Login  <i class="fa fa-user"></i></a></li>
+		      </ul>
+		    </div>
+		  </div>
+		 </nav>    
 			<!-- Angular views -->
 			<div class="container">
 		  	<ng-view></ng-view>
 		 </div>
-			<!-- End of Angular views -->
-			
-<footer>
-  <div class="container">
-    <div class="row">
-    <div class="col-md-4">
-      <span class="copyright">&copy; LinkUp of General Assembly - Seattle 2016</span>
-    </div>
-  <div class="col-md-4">
-    <ul class="list-inline social-buttons">
-      <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-      </li>
-      <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-      </li>
-      <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-      </li>
-    </ul>
-  </div>
-    <div class="col-md-4">
-      <ul class="list-inline quicklinks">
-        <li><a href="#" style="text-decoration: none; color: #b5b5b5">Terms & Conditions |</a>
-        </li>
-        <li><a href="#" style="text-decoration: none; color: #b5b5b5">Privacy Policy</a>
-        </li>
-      </ul>
-    </div>
-   </div>
-  </div>
-</footer>
-</div>
+			<!-- End of Angular views -->	
+		<!-- <footer>
+		  <div class="container">
+		    <div class="row">
+		    <div class="col-md-4">
+		      <span class="copyright">&copy; LinkUp of General Assembly - Seattle 2016</span>
+		    </div>
+		  <div class="col-md-4">
+		    <ul class="list-inline social-buttons">
+		      <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+		      </li>
+		      <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+		      </li>
+		      <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+		      </li>
+		    </ul>
+		  </div>
+		    <div class="col-md-4">
+		      <ul class="list-inline quicklinks">
+		        <li><a href="#" style="text-decoration: none; color: #b5b5b5">Terms & Conditions |</a>
+		        </li>
+		        <li><a href="#" style="text-decoration: none; color: #b5b5b5">Privacy Policy</a>
+		        </li>
+		      </ul>
+		    </div>
+		   </div>
+		  </div>
+		</footer> -->
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
+		<script src="app/controllers.js"></script>		
+		<script src="app/app.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="app/app-services/user.service.js"></script>
 	</body>
 </html>
