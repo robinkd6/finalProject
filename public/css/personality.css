@@ -2,11 +2,14 @@
 	font-family: 'Futura';
 	letter-spacing: 0.8px;
 	margin: 0 auto;
-	margin-bottom: 80px;
 	padding: 5%;
 }
 
 ul.list {
+	list-style: none;
+}
+
+ul li {
 	list-style: none;
 }
 
