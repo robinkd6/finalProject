@@ -1,3 +1,5 @@
+/* Font */
+@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700';
 
 /* Header */
 #large-header {
@@ -11,14 +13,31 @@
 	background-position: top;
 	background-size: cover;
 	z-index: 0;
-	background:url("https://hd.unsplash.com/photo-1464802686167-b939a6910659");
 }
 
-div.container {
-	margin-left: 0px;
-    padding-left: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
+
+html {
+	height: 100%;
+}
+
+hr {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+div.homepage {
+	padding-top: 20%;
+	text-align: center;
+	background-color: #16a085;
+	color: #fff;
+}
+
+div.homepage > h1 {
+	font-family: 'Lato';
+	font-weight: '700';
+	font-size: 5em;
+
 }
 
 button:focus {
@@ -116,31 +135,7 @@ button:focus {
 	width: 100%;
 }
 
-p.maintitle {
-	font-size: 142px;
-	font-family: 'Quicksand-bold', 'Futura';
-	font-weight: 800;
-	position: relative;
-	margin-left: 32%;
-	position: center;
-	margin-top: 4%;
-	font-weight: 500;
-	color: #FFFFFF;
-	letter-spacing: -10px;
-}
 
-button.howHook {
-	width: 170px;
-	height: 40px;
-	color: #ffffff;
-	padding-top: 40%;
-	padding-left: 12px;
-	margin-left: 475px;
-	background: rgba(255,255,255,0.5);
-	border-radius: 3%;
-	
-	z-index: 2;
-}
 .link {
 	outline: none;
 	text-decoration: none;
@@ -243,25 +238,13 @@ element.style {
     background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
     background-color:#34CACA;
 }
-div.howHook {
-	display: center;
-}
-div.hook {
-	font-size: 12px;
-	display: inline-block;
-/*	float: left;*/
-	border: 10px single black;
-	width: 25%;
-}
+
 /* Navbar common style */ 
-nav {
-	 z-index: 2;
-}
-.menu {
-	line-height: 1;
-	margin: 0 auto 3em;
-	 z-index: 2;
-}
+ .navbar{
+        border: none;
+        border-radius: 0;
+        background-color: rgba(0,0,0,0);
+    }
 
 
 
