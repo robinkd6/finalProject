@@ -1,20 +1,17 @@
 /* Font */
 @import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700';
 
-/* Header */
-#large-header {
+body{
 	position: relative;
-	width: 118%;
-	height: 625px;
+
 	overflow: hidden;
 	background-size: auto;
-	background-image: url("../img/Link.png");
+	background-image: url("https://hd.unsplash.com/photo-1421930535025-d2af27c14065");
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: cover;
 	z-index: 0;
 }
-
 
 html {
 	height: 100%;
@@ -29,7 +26,6 @@ hr {
 div.homepage {
 	padding-top: 20%;
 	text-align: center;
-	background-color: #16a085;
 	color: #fff;
 }
 
@@ -37,6 +33,9 @@ div.homepage > h1 {
 	font-family: 'Lato';
 	font-weight: '700';
 	font-size: 5em;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+							 0px 8px 13px rgba(0,0,0,0.1),
+							 0px 18px 23px rgba(0,0,0,0.1);
 
 }
 
@@ -244,34 +243,16 @@ element.style {
         border: none;
         border-radius: 0;
         background-color: rgba(0,0,0,0);
-    }
+  }
+
+ a.navbar-brand {
+ 	font-family: 'Lato';
+ 	font-weight: '100';
+
+ }
 
 
 
-footer {
-  padding: 10px;
-  text-align: center;
-  background-color: #000000;
-}
-
-footer span.copyright {
-  line-height: 40px;
-  font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  text-transform: none;
-  color: #b5b5b5;
-  margin-right: 20%;
-  padding-top: 2%;
-}
-
-footer ul.quicklinks {
-  margin-bottom: 0;
-  line-height: 40px;
-  font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  text-transform: none;
-  margin-left: 32%;
-}
 @media only screen and (max-width : 768px) {
 	.demo-1 .main-title, 
 	.demo-3 .main-title,
