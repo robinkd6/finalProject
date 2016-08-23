@@ -44,6 +44,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/api/personality', require('./routes/personality'));
 
+
+
+
 // Make sure this is the last route loaded.
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
