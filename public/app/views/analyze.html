@@ -9,8 +9,8 @@
         <!-- Number of words: <span ng-bind="wordCount(summary)"></span> -->
       </div>
       <div ng-hide="hideError">{{ err }}</div>
-      <button type="reset" class="btn btnDefault">clear</button>
-      <button type="submit" class="btn btnDefault" ng-click="analyze(summary)">analyze</button>
+      <button type="submit" class="btn btnDefault" ng-click="analyze(summary)">Analyze</button>
+      <button type="reset" class="btn btnDefault">Clear</button>
     <!-- </form> -->
     <br>
     <form ng-submit="saveResult()">

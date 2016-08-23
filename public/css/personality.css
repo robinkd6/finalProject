@@ -1,8 +1,19 @@
+/* Font */
+@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700';
+
+
 .personalityDiv {
-	font-family: 'Futura';
-	letter-spacing: 0.8px;
+
+	font-family: 'Lato';
+	color: #fff;
 	margin: 0 auto;
-	padding: 5%;
+	padding: 15%;
+}
+
+label {
+	font-family: 'Lato';
+	font-weight: 100;
+	font-size: 1.2em;
 }
 
 ul.list {
@@ -26,7 +37,7 @@ ul.list li {
 	border-color: black;
 	border-style: solid;
 	border-width: 1px;	
-	background-color: #f49a7f;
+	background-color: #2980b9;
 }
 
 .barName {
@@ -34,10 +45,10 @@ ul.list li {
 }
 
 #summaryText {
-	border-color:#f49a7f;
+	border-color:#2980b9;
 	border-width: 2px;
 	box-shadow: none;
 	border-radius: 0px;	
-	color: #f49a7f;
+	color: #2980b9;
 	text-align: justify;
 }
