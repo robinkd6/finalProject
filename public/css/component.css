@@ -433,16 +433,43 @@ height: 5%;
 margin: 10px 10px;
 }
 
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 800px) {
 	.demo-1 .main-title, 
 	.demo-3 .main-title,
 	.demo-4 .main-title {
 		font-size: 3em;
 	}
-
+	
+	body {
+		width: 112%;
+	}
 	.navbar {
 	padding: 1px;
 	}
+
+	#aboutUs {
+	border: 2px solid #000;
+	background: #fff;
+	padding: 15px 20px;
+	margin: 50px;
+	font-family: 'Lato';
+	font-weight: 200;
+	font-size: .75em;
+	height: 50%;
+	width: 100%;
+
+}
+
+.profile-photo {
+float: left;
+max-width: 75%;
+margin: 0 auto;
+margin-right: 60px;
+border: 2px solid #2c3e50;
+border-radius: 5%;
+height: 5%;
+margin: 10px 10px;
+}
 
 .personalityDiv {
 		padding-top: 100%;
@@ -460,5 +487,9 @@ margin: 10px 10px;
 }
 .form-style-8 .signup {
 	margin-left: 50px;
+}
+
+#footer {
+	width: 100%;
 }
 }
