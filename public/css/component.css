@@ -5,16 +5,18 @@ body{
 	position: relative;
 
 	overflow: hidden;
-	background-size: auto;
+	background-size: cover;
 	background-image: url("https://hd.unsplash.com/photo-1421930535025-d2af27c14065");
 	background-repeat: no-repeat;
 	background-position: top;
-	background-size: cover;
+	min-height: 100%;
+	margin: 0;
 	z-index: 0;
 }
 
 html {
 	height: 100%;
+	box-sizing: border-box;
 }
 
 hr {
@@ -282,6 +284,7 @@ element.style {
  .navbar a.navbar-brand {
  	font-family: 'Lato';
  	font-weight: '100';
+ 	font-size: 1.5em;
 	outline: none;
 	color: #fff;
  }
@@ -356,6 +359,24 @@ element.style {
 
 }
 
+/* Footer Styling */
+ 
+#footer {
+	background: #000;
+	color: #ecf0f1;
+	width: 100%;
+	position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+
+}
+
+#footer p {
+	padding: 15px 0;
+	margin: 0;
+}
 
 
 

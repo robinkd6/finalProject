@@ -245,6 +245,8 @@ appCtrls.controller('signupCtrl', ['$scope', '$http', 'UserService', function($s
 		console.log($scope);
 	}
 }]);
+
+
 //login controller 
 appCtrls.controller('loginCtrl', ['$scope', '$http', 'UserService', function($scope, $http, UserService) {
 	$scope.user = {};
