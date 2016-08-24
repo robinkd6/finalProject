@@ -3,8 +3,6 @@
 
 body{
 	position: relative;
-
-	overflow: hidden;
 	background-size: cover;
 	background-image: url("https://hd.unsplash.com/photo-1421930535025-d2af27c14065");
 	background-repeat: no-repeat;
@@ -26,7 +24,7 @@ hr {
 }
 
 div.homepage {
-	padding-top: 20%;
+	padding-top: 18%;
 	text-align: center;
 	color: #fff;
 }
@@ -46,12 +44,32 @@ div.homepage > h1 {
 	color: #fff;
 	outline: none;
 	padding: 12px 22px;
+	margin-bottom: 10px;
 	border: 3px solid #1abc9c;
 	border-radius: 0;
 }
 
 #howBtn:hover {
 	border: 2px solid #16a085;
+	margin-bottom: 12px;
+}
+
+#try  {
+	background: none;
+	outline: none;
+	margin: 20px 15px;
+	padding: 10px 22px;
+	border: 3px solid #2980b9;
+	border-radius: 0;
+}
+
+#try:hover {
+	border: 2px solid #3498db;
+}
+
+#try > a {
+	text-decoration: none;
+	color: #fff;
 }
 
 .modal-content {
@@ -60,7 +78,14 @@ div.homepage > h1 {
 
 .modal-footer .btn {
 	border-radius: 0;
+	color: #fff;
 }
+
+.modal-footer .btn-primary > a {
+	color: #fff;
+	text-decoration: none;
+}
+
 
 .modal-title {
 	color: #000;
@@ -378,8 +403,11 @@ element.style {
 	margin: 0;
 }
 
-
-
+#aboutUs {
+	background: #fff;
+	padding: 50%;
+	height: 
+}
 
 @media only screen and (max-width : 768px) {
 	.demo-1 .main-title, 
