@@ -231,7 +231,7 @@ element.style {
     width: 500px;
     padding: 30px;
     background: #FFFFFF;
-    margin: 50px auto;
+    margin: 100px auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -299,12 +299,16 @@ element.style {
     background-color:#34CACA;
 }
 
+.form-style-8 .login {
+	margin-left: 130px;
+}
+.form-style-8 .signup {
+	margin-left: 155px;
+}
+
+
+
 /* Navbar common style */ 
- .navbar{
-        border: none;
-        border-radius: 0;
-        background-color: rgba(0,0,0,0);
-  }
 
  .navbar a.navbar-brand {
  	font-family: 'Lato';
@@ -436,7 +440,25 @@ margin: 10px 10px;
 		font-size: 3em;
 	}
 
+	.navbar {
+	padding: 1px;
+	}
+
+.personalityDiv {
+		padding-top: 100%;
+	}
+
 	.demo-2 .main-title {
 		font-size: 4em;
 	}
+	.form-style-8{
+		width: 75%;
+	}
+
+.form-style-8 .login {
+	margin-left: 50px;
+}
+.form-style-8 .signup {
+	margin-left: 50px;
+}
 }
