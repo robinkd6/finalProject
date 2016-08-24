@@ -103,7 +103,7 @@ button:focus {
 	outline: none !important;
 }
 
-.btnDefault {
+#anaClear {
 	background: none;
 	color: #fff;
 	outline: none;
@@ -112,14 +112,11 @@ button:focus {
 	border-radius: 0;
 	font-family: 'Lato', 'open sans';
 	font-weight: 100;
+	margin: 10px 10px;
 }
 
-.btnDefault:hover,.btnDefault:active {
+#anaClear:hover, #anaClear:active{
 	background: none;
-	outline: none;
-	color: #fff;
-	border-radius: 0;
-
 	border: 1px solid #16a085;;
 	
 }

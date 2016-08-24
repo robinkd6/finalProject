@@ -3,14 +3,16 @@
   <div class="col-xs-12 col-md-8">
     <h1>Analyze</h1>
     <!-- <form ng-submit="analyze()"> -->
-      <div class="form-group">
+      <form class="form-group">
         <label for="title">With IBM Watson's help, let us analyze your personality. Write something about yourself, it could be anything. Preferably between 3,500 - 6,000 for the most accurate results. Minimum 100 words.</label>
+
         <textarea rows="10" cols="20" type="text" class="form-control" id="summaryText" name="summary" ng-model="summary" style="border-color: black; color: black"></textarea>
         <!-- Number of words: <span ng-bind="wordCount(summary)"></span> -->
-      </div>
+      
       <div ng-hide="hideError">{{ err }}</div>
-      <button type="submit" class="btn btnDefault" ng-click="analyze(summary)">Analyze</button>
-      <button type="reset" class="btn btnDefault">Clear</button>
+      <button type="submit" class="btn btn-default" id="anaClear" ng-click="analyze(summary)">Analyze</button>
+      <button type="reset" value="reset" class="btn btn-default" id="anaClear">Clear</button>
+      </form>
     <!-- </form> -->
     <br>
     <form ng-submit="saveResult()">

@@ -1,25 +1,25 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+var express       = require('express');
+var bodyParser    = require('body-parser');
 // var routes = require('./routes');
-var models = require("./models");
-var session = require('express-session');
-// var passport = require('passport');
-// var strategies = require('./config/strategies');
-var path = require('path');
-var app = express();
+var models        = require("./models");
+var session       = require('express-session');
+var passport      = require('passport');
+var strategies = require('./config/strategies');
+var path          = require('path');
+var app           = express();
 
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.set('view-engine', 'ejs');
+
 app.use(bodyParser.json());
-app.use(session({ secret: process.env.PASSWORD, resave: false, saveUninitialized: true }));
+app.use(session({ secret: 'iloveDogs', resave: false, saveUninitialized: true }));
 // Load middleware
-// app.use(passport.initialize());
-// app.use(passport.session());
-// passport.serializeUser(strategies.serializeUser);
-// passport.deserializeUser(strategies.deserializeUser);
-// passport.use(strategies.localStrategy);
+app.use(passport.initialize());
+app.use(passport.session());
+passport.serializeUser(strategies.serializeUser);
+passport.deserializeUser(strategies.deserializeUser);
+passport.use(strategies.localStrategy);
 
 app.use('/login', require('./routes/login.controller'));
 app.use('/signup', require('./routes/signup.controller'));

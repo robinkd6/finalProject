@@ -23,12 +23,12 @@ module.exports = {
       });
     }
   ),
-  facebookStrategy: new FacebookStrategy({
-      clientID: process.env.FACEBOOK_APP_ID,
-      clientSecret: process.env.FACEBOOK_APP_SECRET,
-      callbackURL: process.env.BASE_URL + '/auth/callback/facebook',
-      profileFields: ['email', 'displayName']
-    },
+  // facebookStrategy: new FacebookStrategy({
+  //     clientID: process.env.FACEBOOK_KEY,
+  //     clientSecret: process.env.FACEBOOK_SECRET,
+  //     callbackURL: process.env.BASE_URL + '/auth/callback/facebook',
+  //     profileFields: ['email', 'displayName']
+  //   },
     function(accessToken, refreshToken, profile, done) {
       db.provider.find({
         where: {
@@ -62,8 +62,7 @@ module.exports = {
           });
         }
       });
-    }
-  ),
+    },
   serializeUser: function(user, done) {
     done(null, user.id);
   },
@@ -72,4 +71,4 @@ module.exports = {
       done(null, user.get());
     }).catch(done);
   }
-}
+};
