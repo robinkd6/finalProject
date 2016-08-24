@@ -1,15 +1,26 @@
-var express       = require('express');
-var bodyParser    = require('body-parser');
-// var routes = require('./routes');
-var models        = require("./models");
-var session       = require('express-session');
-var passport      = require('passport');
-var strategies = require('./config/strategies');
-var path          = require('path');
-var app           = express();
+var express       				= require('express'),
+	  bodyParser    				= require('body-parser'),
+	  mongoose 							= require('mongoose'),
+	  models        				= require("./models"),
+	  User 									= require("./models/users"),
+	  session       				= require('express-session'),
+	  passport      				= require('passport'),
+	  LocalStrategy 				= require("passport-local"),
+	  passportLocalMongoose = require("passport-local-mongoose"),
+	  strategies 						= require('./config/strategies'),
+	  path          				= require('path'),
+	  app           				= express();
 
-
+//  routes        = require('./routes'),
+//  
 app.use(express.static(path.join(__dirname, 'public')));
+mongoose.connect("mongodb://localhost/knowYourself");
+
+app.use(require("express-session")({
+	secret: "Black garlic ramen is amazing",
+	resave: false,
+	saveUninitialized: false
+}));
 
 
 app.use(bodyParser.json());
@@ -17,14 +28,17 @@ app.use(session({ secret: 'iloveDogs', resave: false, saveUninitialized: true })
 // Load middleware
 app.use(passport.initialize());
 app.use(passport.session());
-passport.serializeUser(strategies.serializeUser);
-passport.deserializeUser(strategies.deserializeUser);
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 passport.use(strategies.localStrategy);
 
 app.use('/login', require('./routes/login.controller'));
 app.use('/signup', require('./routes/signup.controller'));
 
-
+//Auth Routes
+app.get('/signup', function(req, res){
+	res.render()
+})
 
 // config
 // passport.use(new FacebookStrategy({

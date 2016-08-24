@@ -239,11 +239,11 @@ appCtrls.controller('signupCtrl', ['$scope', '$http', 'UserService', function($s
 			email: $scope.email,
 			password: $scope.password,
 			dob: $scope.dob
-		}
+		};
 
 		UserService.create(usrObj);
 		console.log($scope);
-	}
+	};
 }]);
 
 
