@@ -231,7 +231,7 @@ element.style {
     width: 500px;
     padding: 30px;
     background: #FFFFFF;
-    margin: 100px auto;
+    margin: 150px auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -327,7 +327,7 @@ element.style {
 .navbar {
 	font-family: 'Lato', sans-serif;
 	background: #000;
-	padding: 15px;
+	padding: 20px;
 	font-weight: 100;
 }
 .navbar .navbar-brand {
