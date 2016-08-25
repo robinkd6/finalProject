@@ -1,10 +1,10 @@
 <div class="form-style-8">
   <h2>Login to your account</h2>
-  <form method="POST" ng-submit="login()">
-    <input type="email" name="email" placeholder="Email" />
-   <input type="password" name="password" placeholder="Password i.e. ILikeTurtles" />
+  <form action="/login" method="POST">
+    <input type="text" name="username" placeholder="username" />
+   <input type="password" name="password" placeholder="password">
    <div class="login">
-    <input type="button" value="Login" />
+    <input type="submit" value="Log in">
    </div>
   </form>
    <!--  <span style="margin-left: 180px">— or —</span> -->

@@ -14,32 +14,31 @@ var express       				= require('express'),
 //  routes        = require('./routes'),
 
 mongoose.Promise = global.Promise;
+
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 mongoose.connect("mongodb://localhost/knowYourself");
 app.use(bodyParser.urlencoded({extended: true}));
-
-
-
-
-app.use(bodyParser.json());
-// app.use(session({ secret: 'iloveDogs', resave: false, saveUninitialized: true }));
-// Load middleware
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(require("express-session")({
 	secret: "Black garlic ramen is amazing",
 	resave: false,
 	saveUninitialized: false
 }));
+
+
+app.use(bodyParser.json());
+app.use('/api/personality', require('./routes/personality'));
+
+// app.use(session({ secret: 'iloveDogs', resave: false, saveUninitialized: true }));
+// Load middleware
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 // passport.use(strategies.localStrategy);
 
-// app.use('/login', require('./routes/login.controller'));
-// app.use('/signup', require('./routes/signup.controller'));
-
-//Auth Routes
+//AUTH Routes
 app.get('/signup', function(req, res){
 	res.render("signup");
 });
@@ -57,7 +56,7 @@ app.post('/signup', function (req, res)
     	req.body.password, function(err, user) {
     		if(err) {
     			console.log(err);
-    			return res.render('/signup');
+    			return res.redirect('/signup');
     		}
     		//logs user in
     		passport.authenticate("local")(req, res, function(){
@@ -67,12 +66,19 @@ app.post('/signup', function (req, res)
 });
 
 //LOGIN ROUTES
+app.get("/login", function(req, res)
+{
+	res.render("login");
+});
+//Middleware + login logic
+app.post("/login", passport.authenticate("local", 
+{
+	successRedirect: "/analyze",
+	failureRedirect: "/login"
+}), function(req, res) {
+	console.log("works");
 
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-
-app.use('/api/personality', require('./routes/personality'));
+});
 
 
 
