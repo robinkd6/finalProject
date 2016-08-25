@@ -3,7 +3,12 @@ var router = express.Router();
 var request = require('request');
 var db  = require('../models');
 
-router.post('/', function (req, res) {
+router.post('/signup', function (req, res) 
+// {
+//     res.send("REGISTER POST ROTUE");
+// });
+
+{
     console.log('Yes, I work', req.body);
     //var newDob = new Date(req.body.dob);
     db.user.findOrCreate({

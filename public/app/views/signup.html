@@ -1,10 +1,11 @@
 <div class="form-style-8">
   <h2 style="position: center">Sign Up</h2>
-  <form ng-submit="signup()">
+  <!-- <form ng-submit="signup()"> -->
+  <form action="/signup" method="POST">
     <input type="text" name="firstName" placeholder="First Name" ng-model="firstName" />
-    <input type="text" name="lastName" placeholder="Last Name" ng-model="lastName" />
-    <!-- <input type="date" name="dob" placeholder="" ng-model="dob" /> -->
-    <input type="email" name="email" placeholder="Email" ng-model="email" />
+    <input type="text" name="lastName" placeholder="Last Name" />
+    <input type="text" name="username" placeholder="username"  />
+<input type="email" name="email" placeholder="Email" ng-model="email" />
     <input type="password" name="password" placeholder="password" ng-model="password" />
     <div class="signup">
     <input input type="submit" value="Sign Up">
