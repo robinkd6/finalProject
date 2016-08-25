@@ -19,6 +19,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 mongoose.connect("mongodb://localhost/knowYourself");
 app.use(bodyParser.urlencoded({extended: true}));
+
 app.use(require("express-session")({
 	secret: "Black garlic ramen is amazing",
 	resave: false,
@@ -39,7 +40,7 @@ passport.deserializeUser(User.deserializeUser());
 // passport.use(strategies.localStrategy);
 
 //AUTH Routes
-app.get('/signup', function(req, res){
+app.get('/signup', isLoggesIn, function(req, res){
 	res.render("signup");
 });
 
@@ -74,11 +75,24 @@ app.get("/login", function(req, res)
 app.post("/login", passport.authenticate("local", 
 {
 	successRedirect: "/analyze",
-	failureRedirect: "/login"
+	failureRedirect: "login"
 }), function(req, res) {
 	console.log("works");
 
 });
+
+app.get('/logout', function(req, res)
+{
+	var _LoggedIn = (req.isAuthenticated() ? true : false);
+});
+
+function isLoggesIn(req, res, next)
+{
+	if(req.isAuthenticated()){
+		return next();
+	}
+	res.redirect("/login");
+}
 
 
 
