@@ -10,6 +10,8 @@ var express       				= require('express'),
 	  strategies 						= require('./config/strategies'),
 	  path          				= require('path'),
 	  app           				= express();
+	  require('dotenv').config();
+
 
 //  routes        = require('./routes'),
 
@@ -17,6 +19,7 @@ mongoose.Promise = global.Promise;
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
 mongoose.connect("mongodb://localhost/knowYourself");
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -83,7 +86,10 @@ app.post("/login", passport.authenticate("local",
 
 app.get('/logout', function(req, res)
 {
-	var _LoggedIn = (req.isAuthenticated() ? true : false);
+	req.logout();
+	req.flash("success", "Logged you out");
+	// var _LoggedIn = (req.isAuthenticated() ? true : false);
+	res.redirect("/");
 });
 
 function isLoggesIn(req, res, next)
