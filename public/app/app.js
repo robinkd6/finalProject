@@ -2,6 +2,7 @@ var app = angular.module('PersonalityApp', ['ngRoute', 'AppCtrls']);
 
 //console.log('Inside the angular script', app);
 
+
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/', {

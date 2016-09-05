@@ -1,5 +1,8 @@
 /* Font */
 @import 'https://fonts.googleapis.com/css?family=Lato:100,200,300,400';
+* {
+	font-family: 'Lato' !important
+}
 
 body{
 	position: relative;
@@ -23,6 +26,7 @@ hr {
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
+/*Container in landing page*/
 div.homepage {
 	padding-top: 18%;
 	text-align: center;
@@ -38,6 +42,8 @@ div.homepage > h1 {
 							 0px 18px 23px rgba(0,0,0,0.1);
 
 }
+
+/*Landing page - How and try button styling*/
 
 #howBtn {
 	background: none;
@@ -72,6 +78,7 @@ div.homepage > h1 {
 	color: #fff;
 }
 
+/*FRONT PAGE MODAL*/
 .modal-content {
 	border-radius: 0;
 }
@@ -103,6 +110,8 @@ button:focus {
 	outline: none !important;
 }
 
+/*analyze button styling*/
+
 #anaClear {
 	background: none;
 	color: #fff;
@@ -121,39 +130,47 @@ button:focus {
 	
 }
 
+/* Personailty analysis rendering*/
+.small {
+	font-family: 'Lato';
+	font-weight: 200;
+}
+
 .tab {
-	font-weight: bold;
+	font-family: 'Lato';
+	font-weight: 200;
 	font-size: 15px;
-	border-style: solid;
+	border: solid 2px #000;
 	border-width: 2px;
+	color: #000;
 	border-bottom-style: none;
-	border-color: #000000;
+	border-color: #000;
 	margin-right: -7px;
 	padding: 10px 20px;
 	display: inline;
-	background-color: white;
-	border-top-left-radius: 13px;
-	border-top-right-radius: 13px;
+	background: #bdc3c7;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 10px;
 	width: 30%;
 	text-align: center;
 	letter-spacing: 2px;
 }
 
-.tab:focus,.tab:active {
-	background-color: #2980b9;
+.tab:focus,.tab:active,.tab:hover {
+	background-color: #ecf0f1;
 }
-.tab:hover {
-	background-color: #2980b9;
-}
+
 
 .tabContent {
 	width: 100%;
-	border-style: solid;
+	border: solid 1px #000;
+	font-family: 'Lato';
+	font-weight: 100;
+	color: #000;
 	border-width: 2px;
-	border-color: #000000;
 	margin-top: 0px;
 	padding: 15px;
-	border-radius: 13px;
+	background: #fff;
 	border-top-left-radius: 0px;
 }
 
