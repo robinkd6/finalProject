@@ -204,63 +204,49 @@ Few personality types are as creative and charismatic as ENFPs. Known for their 
 		else if(global5 === 'SCOAI' || global5 === 'SLOAI' ) {
 			mbti = 'ENFJ';
 			personalityType = 'Protagonist';
-			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
-			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
-			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
-			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
-			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
-			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+			rSummary = "ENFJs are natural-born leaders, full of passion and charisma. Forming around two percent of the population, they are oftentimes our politicians, our coaches and our teachers,\
+reaching out and inspiring others to achieve and to do good in the world. With a natural confidence that begets influence, ENFJs take a great deal of pride and joy in guiding others to work together to improve themselves and their community.\
+Few personality types are as inspiring and charismatic as ENFJs. Their idealism and vision allow ENFJs\
+to overcome many challenging obstacles, more often than not brightening the lives of those around them. ENFJs' imagination is invaluable in many areas, including their own personal growth."
 		}
 		else if(global5 === 'SCOEI' || global5 === 'SLOEI' ) {
 			mbti = 'ENTJ';
 			personalityType = 'Commander';
-			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
-			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
-			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
-			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
-			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
-			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+			rSummary = "ENTJs are natural-born leaders. People with this personality type embody the gifts of charisma and confidence, and project authority in a way that draws crowds together behind a common goal. \
+But unlike their Feeling (F) counterpart, ENTJs are characterized by an often ruthless level of rationality, using their drive, determination and sharp minds to achieve whatever end they've set for themselves. \
+Perhaps it is best that they make up only three percent of the population, lest they overwhelm the more timid and sensitive personality types that make up much of the rest of the world – but we have ENTJs to thank for many of the businesses and institutions we take for granted every day.\
+ENTJs' intelligence, strong will and logical reasoning skills are a force to be reckoned with. Be it a minor obstacle or a seemingly impossible task, ENTJs will find a way – or make one. This fearsome determination and intellect allow ENTJs to overcome many challenges."
 
 		}
 		else if(global5 === 'SCOEN' || global5 === 'SLOEN' ) {
 			mbti = 'ESTJ';
 			personalityType = 'Executive';
-			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
-			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
-			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
-			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
-			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
-			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+			rSummary = "ESTJs are representatives of tradition and order, utilizing their understanding of what is right, wrong and socially acceptable to bring families and communities together. Embracing the values of honesty, dedication and dignity,\
+			 people with the ESTJ personality type are valued for their clear advice and guidance, and they happily lead the way on difficult paths. Taking pride in bringing people together, ESTJs often take on roles as community organizers, working hard\
+to bring everyone together in celebration of cherished local events, or in defense of the traditional values that hold families and communities together.\
+Few personality types are as practical and strong-willed as ESTJs. Known for their reliability and administrative skills, ESTJs are good at creating and maintaining a secure and stable environment for themselves and their loved ones. ESTJs' dedication is invaluable in many areas, including their own personal growth."
 		}
 		else if(global5 === 'SCOAN' || global5 === 'SLOAN' ) {
 			mbti = 'ESFJ';
 			personalityType = 'Consul';
-			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
-			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
-			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
-			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
-			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
-			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+			rSummary = "";
 		}
 		else if(global5 === 'SCUEN' || global5 === 'SLUEN' ) {
 			mbti = 'ESTP';
 			personalityType = 'Entrepreneur';
-			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
-			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
-			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
-			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
-			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
-			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+			rSummary = "ESTP personality types always have an impact on their immediate surroundings – the best way to spot them at a party is to look for the whirling eddy of people flitting about them as they\
+move from group to group. Laughing and entertaining with a blunt and earthy humor, ESTP personalities love to be the center of attention. If an audience member is asked to come on stage, ESTPs volunteer – \
+or volunteer a shy friend. Theory, abstract concepts and plodding discussions about global issues and their implications don't keep ESTPs interested for long. ESTPs keep their conversation energetic, with a\
+ good dose of intelligence, but they like to talk about what is – or better yet, to just go out and do it. ESTPs leap before they look, fixing their mistakes as they go, rather than sitting idle, preparing contingencies and escape clauses.\
+ Few personality types are as charming and attractive as ESTPs. Known for their ability to improvise and focus completely on the present, ESTPs are great at finding exciting new things to explore and experience. ESTPs' creativity and down-to-earth attitude are invaluable in many areas, including their own personal growth."
 		}
 		else if(global5 === 'SCUAN' || global5 === 'SLUAN' ) {
 			mbti = 'ESFP';
 			personalityType = 'Entertainer';
-			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
-			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
-			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
-			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
-			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
-			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+			rSummary = "If anyone is to be found spontaneously breaking into song and dance, it is the ESFP personality type. ESFPs get caught up in the excitement of the moment, and want everyone else to feel that way, too. No other personality\
+type is as generous with their time and energy as ESFPs when it comes to encouraging others, and no other personality type does it with such irresistible style.\
+Few personality types are as charming and attractive as ESFPs. Known for their ability to improvise and focus completely on the present, ESFPs are great at finding exciting new things to explore and experience. ESFPs' energy,\
+ enthusiasm and down-to-earth attitude are invaluable in many areas, including their own personal growth.";
 		}
 
 		$scope.mbti = mbti;
