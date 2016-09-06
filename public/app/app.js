@@ -1,9 +1,11 @@
-var app = angular.module('PersonalityApp', ['ngRoute', 'AppCtrls']);
+var app = angular.module('PersonalityApp', ['ngRoute', 'AppCtrls', 'auth0', 'angular-storage', 'angular-jwt']);
 
 //console.log('Inside the angular script', app);
 
 
-app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider, $httpProvider, jwtInterceptorProvider) {
+  
+
   $routeProvider
   .when('/', {
     templateUrl: 'app/views/home.html'
