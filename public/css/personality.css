@@ -21,6 +21,11 @@
 	font-size: 1.1em;
 	font-style: italic;
 } 
+
+#rSum {
+	font-family: 'Lato';
+	font-weight: 100;
+}
 label {
 	font-family: 'Lato';
 	font-weight: 200;

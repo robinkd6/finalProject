@@ -1,3 +1,4 @@
+require("./data/dbconnection.js").open();
 var express       				= require('express'),
 	  bodyParser    				= require('body-parser'),
 	  mongoose 							= require('mongoose'),
@@ -107,5 +108,7 @@ function isLoggesIn(req, res, next)
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
+
+require('./models/users.js')
 
 app.listen(3000);
