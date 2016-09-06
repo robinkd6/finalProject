@@ -229,7 +229,7 @@ Few personality types are as practical and strong-willed as ESTJs. Known for the
 		else if(global5 === 'SCOAN' || global5 === 'SLOAN' ) {
 			mbti = 'ESFJ';
 			personalityType = 'Consul';
-			rSummary = "";
+			rSummary = "People who share the ESFJ personality type are, for lack of a better word, popular. ESFJs are the cheerleaders and the quarterbacks, setting the tone, taking the spotlight and leading their teams forward to victory and fame. Later in life, \ ESFJs continue to enjoy supporting their friends and loved ones, organizing social gatherings and doing their best to make sure everyone is happy.";
 		}
 		else if(global5 === 'SCUEN' || global5 === 'SLUEN' ) {
 			mbti = 'ESTP';
