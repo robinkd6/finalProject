@@ -170,32 +170,25 @@ Few personality types are as practical and dedicated as ISFJs. Known for their r
 		else if(global5 === 'RCUEN' || global5 === 'RLUEN' ) {
 			mbti = 'ISTP';
 			personalityType = 'Virtuoso';
-			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
-			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
-			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
-			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
-			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
-			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+			rSummary = "ISTPs love to explore with their hands and their eyes, touching and examining the world around them with cool rationalism and spirited curiosity. People with this personality type are natural Makers, moving from project to project, building the useful and the superfluous for the fun of it, and\
+learning from their environment as they go. Often mechanics and engineers, ISTPs find no greater joy than in getting their hands dirty pulling things apart and putting them back together, just a little bit better than they were before.\
+Few personality types are as bold and practical as ISTPs. Known for their technical mastery and willingness to improvise, ISTPs are good at finding unique solutions to seemingly impossible challenges. ISTPs' desire to explore and learn new things is invaluable in many areas, including their own personal growth.";
 		}
 		else if(global5 === 'RCUAN' || global5 === 'RLUAN' ) {
 			mbti = 'ISFP';
 			personalityType = 'Adventurer';
-			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
-			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
-			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
-			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
-			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
-			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+			rSummary = "ISFP personality types are true artists, but not necessarily in the typical sense where they're out painting happy little trees. Often enough though, they are perfectly capable of this. Rather, it's that they use aesthetics, design and even their choices and\
+actions to push the limits of social convention. ISFPs enjoy upsetting traditional expectations with experiments in beauty and behavior – chances are, they've expressed more than once the phrase 'Don't box me in!'\
+Few personality types are as colorful and charming as ISFPs. Known for their kindness and artistic skills, ISFPs are great at finding exciting new things to explore and experience. ISFPs' creativity and down-to-earth attitude are invaluable in many areas, including their own personal growth."
 		}
 		else if(global5 === 'SCUAI' || global5 === 'SLUAI' ) {
 			mbti = 'ENFP';
 			personalityType = 'Campaigner';
-			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
-			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
-			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
-			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
-			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
-			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+			rSummary = "The ENFP personality is a true free spirit. Charming, independent, energetic and compassionate, the 7% of the population that they comprise can certainly be felt in any crowd.\
+More than just sociable people-pleasers though, ENFPs, like all their Diplomat cousins, are shaped by their Intuitive (N) quality, allowing them to read between the lines with curiosity and energy. They tend to see life as a big, complex puzzle where everything is connected – \
+but unlike Analysts, who tend to see that puzzle as a series of systemic machinations, ENFPs see it through a prism of emotion, compassion and mysticism, and are always looking for a deeper meaning.\
+As they observe, forming new connections and ideas, ENFPs won't hold their tongues – they're excited about their findings, and share them with anyone who'll listen. This infectious enthusiasm has the dual benefit of giving ENFPs a chance to make more social connections, and of giving them a new source of information and experience, as they fit their new friends' opinions into their existing ideas.\
+Few personality types are as creative and charismatic as ENFPs. Known for their idealism and enthusiasm, ENFPs are good at dealing with unexpected challenges and brightening the lives of those around them. ENFPs' imagination is invaluable in many areas, including their own personal growth."
 		
 		}
 		else if(global5 === 'SCUEI' || global5 === 'SLUEI' ) {
