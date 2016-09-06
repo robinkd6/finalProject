@@ -2,6 +2,7 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700';
 
 
+
 .personalityDiv {
 
 	font-family: 'Lato';
@@ -9,11 +10,21 @@
 	margin: 0 auto;
 	padding: 15%;
 }
+.big5 {
+	font-weight: 400;
+	font-size: 1.3em;
+}
 
+.pResult {
+	font-family: 'Lato';
+	font-weight: 300;
+	font-size: 1.1em;
+	font-style: italic;
+} 
 label {
 	font-family: 'Lato';
-	font-weight: 100;
-	font-size: 1.2em;
+	font-weight: 200;
+	font-size: 1.3em;
 }
 
 ul.list {

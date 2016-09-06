@@ -17,6 +17,7 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 		$scope.hideBig5 = false;
 		$scope.hideNeeds = true;
 		$scope.hideValues = true;
+		$scope.hideSum = true;
 		$scope.hideSaveMsg = true;
 	};
 
@@ -24,6 +25,7 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 		$scope.hideBig5 = true;
 		$scope.hideNeeds = false;
 		$scope.hideValues = true;
+		$scope.hideSum = true;
 		$scope.hideSaveMsg = true;
 	};
 
@@ -31,6 +33,15 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 		$scope.hideBig5 = true;
 		$scope.hideNeeds = true;
 		$scope.hideValues = false;
+		$scope.hideSum = true;
+		$scope.hideSaveMsg = true;
+	};
+
+	$scope.showSum = function(){
+		$scope.hideBig5 = true;
+		$scope.hideNeeds = true;
+		$scope.hideValues = true;
+		$scope.hideSum = false;
 		$scope.hideSaveMsg = true;
 	};
 
@@ -61,6 +72,7 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 		$scope.hideAll = false;
 		$scope.hideNeeds = true;
 		$scope.hideValues = true;
+		$scope.hideSum = true;
 		$scope.hideError = true;
 		var personality = res.data.tree.children[0].children[0].children;
 		$scope.needs = res.data.tree.children[1].children[0].children;
@@ -112,54 +124,155 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 		// Mapping Global 5 to Myers Briggs
 		if(global5 === 'RCUAI' || global5 === 'RLUAI' ) {
 			mbti = 'INFP';
+			personalityType = 'Mediator';
+			rSummary = "INFP personalities are true idealists, always looking for the hint of good in even the worst of people and events, searching for ways to make things better.\
+While they may be perceived as calm, reserved, or even shy, INFPs have an inner flame and passion that can truly shine. Comprising just 4% of the population, the risk of\
+feeling misunderstood is unfortunately high for the INFP personality type – but when they find like-minded people to spend their time with, the harmony they feel will be a fountain of joy and inspiration.\
+Few personality types are as poetic and kind-hearted as INFPs. Their altruism and vivid imagination allow INFPs to overcome many challenging obstacles, more often than not brightening the lives of those around them. \
+INFPs' creativity is invaluable in many areas, including their own personal growth"
 		}
 		else if(global5 === 'RCUEI' || global5 === 'RLUEI' ) {
 			mbti = 'INTP';
+			personalityType = 'Logician';
+			rSummary = "The INTP personality type is fairly rare, making up only three percent of the population, which is definitely a good thing for them, as there's nothing they'd be more unhappy about than being\
+'common'. INTPs pride themselves on their inventiveness and creativity, their unique perspective and vigorous intellect. Usually known as the philosopher, the architect, or the dreamy professor, INTPs have\
+ been responsible for many scientific discoveries throughout history. INTPs' intelligence and logical reasoning skills are a force to be reckoned with. Be it a minor debate or a life-changing decision, INTPs will find\
+ it easy to entertain multiple ideas and keep a cool head. This allows INTPs to overcome many challenging obstacles – yet they can be easily tripped up in areas where careful and rational thinking is more of a liability than an asset.";
 		}
 		else if(global5 === 'RCOAI' || global5 === 'RLOAI' ) {
 			mbti = 'INFJ';
+			personalityType = 'Advocate';
+			rSummary = "The INFJ personality type is very rare, making up less than one percent of the population, but they nonetheless leave their mark on the world. As Diplomats (NF), they have an inborn sense of idealism and morality,\
+but what sets them apart is the accompanying Judging (J) trait – INFJs are not idle dreamers, but people capable of taking concrete steps to realize their goals and make a lasting positive impact. Few personality types are as sensitive and mysterious as INFJs.\
+ Your imagination and empathy make you someone who not only cherishes their integrity and deeply held principles but, unlike many other idealistic types, is also capable of turning those ideals into plans, and executing them.";
 		}
 		else if(global5 === 'RCOEI' || global5 === 'RLOEI' ) {
 			mbti = 'INTJ';
+			personalityType = 'Architect';
+			rSummary = "It’s lonely at the top, and being one of the rarest and most strategically capable personality types, INTJs know this all too well. INTJs form just two percent of the population, and women of this personality type are especially rare, forming just 0.8% of the population\
+– it is often a challenge for them to find like-minded individuals who are able to keep up with their relentless intellectualism and chess-like maneuvering. People with the INTJ personality type are imaginative yet decisive, ambitious yet private, amazingly curious, but they do not squander their energy.\
+Few personality types are as mysterious and controversial as INTJs. Possessing intellect and strategic thinking that allow them to overcome many challenging obstacles, INTJs have the ability to both develop and implement a plan for everything, including their own personal growth.";
 		}
 		else if(global5 === 'RCOEN' || global5 === 'RLOEN' ) {
 			mbti = 'ISTJ';
+			personalityType = 'Logistician';
+			rSummary = "The ISTJ personality type is thought to be the most abundant, making up around 13% of the population. Their defining characteristics of integrity, practical logic and tireless dedication to duty make ISTJs a vital core to many families, as well as organizations that uphold\
+traditions, rules and standards, such as law offices, regulatory bodies and military. People with the ISTJ personality type enjoy taking responsibility for their actions, and take pride in the work they do – when working towards a goal, ISTJs hold back none of their time and energy completing each relevant task with accuracy and patience.\
+Few personality types are as practical and dedicated as ISTJs. Known for their reliability and hard work, ISTJs are good at creating and maintaining a secure and stable environment for themselves and their loved ones. ISTJs' dedication is invaluable in many areas, including their own personal growth.";
 		}
 		else if(global5 === 'RCOAN' || global5 === 'RLOAN' ) {
 			mbti = 'ISFJ';
+			personalityType = 'Defender';
+			rSummary = "The ISFJ personality type is quite unique, as many of their qualities defy the definition of their individual traits. Though possessing the Feeling (F) trait, ISFJs have excellent analytical abilities; though Introverted (I), they have well-developed people skills and robust social relationships; and though they are a Judging (J) type,\
+ISFJs are often receptive to change and new ideas. As with so many things, people with the ISFJ personality type are more than the sum of their parts, and it is the way they use these strengths that defines who they are.\
+Few personality types are as practical and dedicated as ISFJs. Known for their reliability and altruism, ISFJs are good at creating and maintaining a secure and stable environment for themselves and their loved ones. ISFJs' dedication is invaluable in many areas, including their own personal growth."
 		}
 		else if(global5 === 'RCUEN' || global5 === 'RLUEN' ) {
 			mbti = 'ISTP';
+			personalityType = 'Virtuoso';
+			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
+			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
+			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
+			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
+			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
+			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
 		}
 		else if(global5 === 'RCUAN' || global5 === 'RLUAN' ) {
 			mbti = 'ISFP';
+			personalityType = 'Adventurer';
+			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
+			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
+			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
+			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
+			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
+			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
 		}
 		else if(global5 === 'SCUAI' || global5 === 'SLUAI' ) {
 			mbti = 'ENFP';
+			personalityType = 'Campaigner';
+			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
+			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
+			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
+			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
+			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
+			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+		
 		}
 		else if(global5 === 'SCUEI' || global5 === 'SLUEI' ) {
 			mbti = 'ENTP';
+			personalityType = 'Debater';
+			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
+			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
+			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
+			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
+			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
+			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
 		}
 		else if(global5 === 'SCOAI' || global5 === 'SLOAI' ) {
 			mbti = 'ENFJ';
+			personalityType = 'Protagonist';
+			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
+			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
+			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
+			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
+			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
+			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
 		}
 		else if(global5 === 'SCOEI' || global5 === 'SLOEI' ) {
 			mbti = 'ENTJ';
+			personalityType = 'Commander';
+			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
+			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
+			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
+			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
+			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
+			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
+
 		}
 		else if(global5 === 'SCOEN' || global5 === 'SLOEN' ) {
 			mbti = 'ESTJ';
+			personalityType = 'Executive';
+			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
+			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
+			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
+			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
+			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
+			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
 		}
 		else if(global5 === 'SCOAN' || global5 === 'SLOAN' ) {
 			mbti = 'ESFJ';
+			personalityType = 'Consul';
+			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
+			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
+			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
+			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
+			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
+			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
 		}
 		else if(global5 === 'SCUEN' || global5 === 'SLUEN' ) {
 			mbti = 'ESTP';
+			personalityType = 'Entrepreneur';
+			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
+			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
+			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
+			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
+			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
+			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
 		}
 		else if(global5 === 'SCUAN' || global5 === 'SLUAN' ) {
 			mbti = 'ESFP';
+			personalityType = 'Entertainer';
+			rSummary = "The ENTP personality type is the ultimate devil's advocate, thriving on the process of shredding arguments and beliefs and letting\
+			the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don't do this because they are trying\
+			 to achieve some deeper purpose or strategic goal, but for the simple reason that it's fun. No one loves the process of mental sparring more than ENTPs,\
+			  as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.\
+			  ENTPs intelligence, curiosity and sound reasoning skills are a force to be reckoned with. ENTPs will always be able to find just the right argument, the weakest chink in their\
+			  opponent's armor, or the way out of a seemingly hopeless situation. Their fearsome debate skills and impressive knowledge allow ENTPs to overcome many challenges.;"
 		}
 
 		$scope.mbti = mbti;
+		$scope.personalityType = personalityType;
+		$scope.rSummary = rSummary;
 	}
 
 	$scope.saveResult = function(){
@@ -226,45 +339,5 @@ appCtrls.controller('PersonalityCtrl', ['$scope', '$http', 'UserService', functi
 
 }]);
 
-appCtrls.controller('signupCtrl', ['$scope', '$http', 'UserService', function($scope, $http, UserService){
-	$scope.firstName = null;
-	$scope.lastName = null;
-	$scope.email = null;
-	$scope.password = null;
-
-	$scope.signup = function(){
-		var usrObj = {
-			firstName: $scope.firstName,
-			lastName: $scope.lastName,
-			email: $scope.email,
-			password: $scope.password,
-			dob: $scope.dob
-		};
-
-		UserService.create(usrObj);
-		console.log($scope);
-	};
-}]);
-
-
-//login controller 
-appCtrls.controller('loginCtrl', ['$scope', '$http', 'UserService', function($scope, $http, UserService) {
-	$scope.user = {};
-    $scope.loginUser=function()
-    {
-        var username=$scope.user.name;
-        var password=$scope.user.password;
-        if(username=="" && password=="")
-        {
-            page.setUser($scope.user);
-            $location.path( "/home" );
-        }
-        else
-        {
-            $scope.message="Error";
-            $scope.messagecolor="alert alert-danger";
-        }
-    };
-}]);
 
 
