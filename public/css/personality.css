@@ -1,8 +1,9 @@
 /* Font */
 @import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700';
 
-
-
+/******************************/
+/* Container for page */
+/******************************/
 .personalityDiv {
 
 	font-family: 'Lato';
@@ -10,6 +11,11 @@
 	margin: 0 auto;
 	padding: 15%;
 }
+
+/******************************/
+/** Personailty Result - Myers Briggs and Big 5 */
+/******************************/
+
 .big5 {
 	font-weight: 400;
 	font-size: 1.3em;
@@ -22,10 +28,14 @@
 	font-style: italic;
 } 
 
+/******************************/
+/* RESULTS/SUMMARY FOR BIG 5*/
+/******************************/
 #rSum {
 	font-family: 'Lato';
-	font-weight: 100;
+	font-weight: 200;
 }
+
 label {
 	font-family: 'Lato';
 	font-weight: 200;
@@ -44,6 +54,9 @@ ul.list li {
 	list-style-position: inside;
 }
 
+/******************************/
+/*STYLING FOR BAR GRAPH RESULTS*/
+/******************************/
 .bar {
 	display: inline-block;
 	height: 25px;
@@ -60,7 +73,9 @@ ul.list li {
 .barName {
 	padding-left: 13px;
 }
-
+/******************************/
+/* STYLE FOR TEXT AREA - INPUT*/
+/******************************/
 #summaryText {
 	border-color:#2980b9;
 	border-width: 2px;
