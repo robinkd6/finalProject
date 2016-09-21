@@ -1,7 +1,13 @@
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL> # [required])
 
+Wireframes
+
+https://ninjamock.com/s/B488D
+
 Inspiration
-To catch up with new friends who you don't know very well
+
+An app to explore and find new friendships using the Watson Personality API
+
 
 What it does
 Analyze personality, convert it to Myers Briggs equivalent. Recommend events from either Event Brite, Facebook Events or Eventful API. Might add messaging feature for users(if I have the time)

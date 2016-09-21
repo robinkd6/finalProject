@@ -17,11 +17,16 @@
     <br>
     <form ng-submit="saveResult()">
       <div ng-hide="hideAll">
-        <h1 class="big5">Personality Insights&trade;</h1>
-        <h3 class="big5">Myers-Briggs Personality Type Equivalent: <span class="pResult">{{ mbti }} aka The {{ personalityType }}</span></h3>
-
-        <h3 class="big5">Big 5 Personality Type Equivalent: <span class="pResult">{{ global5 }}</span></h3>
-        <div>
+      <div>
+      <div class="list-group">
+        <a href="#" class="list-group-item disabled big5">
+          Personality Insights&trade;
+        </a>
+        <a href="#" class="list-group-item big5">Myers-Briggs Personality Type Equivalent: <span class="pResult">{{ mbti }} aka The {{ personalityType }}</span></a>
+        <a href="#" class="list-group-item big5">Big 5 Personality Type Equivalent: <span class="pResult">{{ global5 }}</span></a>
+       
+      </div>
+        
           <button ng-click="showBig5()" class="tab">Big 5</button>
           <button ng-click="showNeeds()" class="tab">Needs</button>
           <button ng-click="showValues()" class="tab">Values</button>

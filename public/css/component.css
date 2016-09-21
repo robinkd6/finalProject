@@ -9,8 +9,9 @@ body {
 	position: relative;
 	background-size: cover;
 	background-image: url("https://hd.unsplash.com/photo-1421930535025-d2af27c14065");
-	background-repeat: repeat;
-	background-size: 100% 215%;
+	background-repeat: no-repeat;
+	background-color: #ecf0f1;
+	background-size: 100% 100%;
 	background-position: top;
 	min-height: 100%;
 	margin: 0;
@@ -158,12 +159,13 @@ button:focus {
 	font-size: 1.2em;
 }
 
+/*Personality tabs - big5, needs, values, conclusion*/
 .tab {
 	background: none;
 	color: #fff;
 	outline: none;
 	margin-right: 12px;
-	border: 2px solid #1abc9c;
+	border: 1px solid #1abc9c;
 	color: #fff;
 	border-bottom-style: none;
 	margin-right: -3px;
