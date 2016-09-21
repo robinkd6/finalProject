@@ -2,14 +2,17 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700';
 
 /******************************/
-/* Container for page */
+/* Container for*/
 /******************************/
 .personalityDiv {
-
-	font-family: 'Lato';
 	color: #fff;
-	margin: 0 auto;
-	padding: 15%;
+	display: inline-block;
+	padding: 0;
+	margin-bottom: 120px;
+}
+
+.form-group {
+	margin-top: 100px;
 }
 
 /******************************/
@@ -21,29 +24,49 @@
 	font-size: 1.3em;
 }
 
+.big5s {
+
+}
+
 .pResult {
-	font-family: 'Lato';
 	font-weight: 300;
-	font-size: 1.1em;
-	font-style: italic;
+	
 } 
 
 /******************************/
 /* RESULTS/SUMMARY FOR BIG 5*/
 /******************************/
 #rSum {
-	font-family: 'Lato';
 	font-weight: 200;
+	text-align: justify;
+	padding: 15px;
+	font-size: .8em;
 }
 
 label {
-	font-family: 'Lato';
 	font-weight: 200;
-	font-size: 1.3em;
+	font-size: 1.0em;
+}
+/*Stlying for listed analysis*/
+.list-group {
+  padding-left: 0;
+  margin-bottom: 20px;
+  font-size: .75em;
+  box-shadow: 5px 7px 5px rgba(0, 0, 0, 0.22);
 }
 
+/******************************/
+/*Styling for big 5 values*/
+/******************************/
+
+h3 {
+	font-size: 25px;
+	font-weight: 300;
+	text-align: center;
+}
 ul.list {
 	list-style: none;
+	padding-left: 0;
 }
 
 ul li {
@@ -52,15 +75,50 @@ ul li {
 
 ul.list li {
 	list-style-position: inside;
+	font-weight: 300;
+}
+
+/*Personality tabs - big5, needs, values, conclusion*/
+.tab {
+	
+	color: #fff;
+	background: #ecf0f1;
+	border: 1px solid #bdc3c7;
+	color: #000;
+	border-bottom-style: none;
+	margin-right: -30px;
+	padding: 15px 15px;
+	width: 25%;
+	font-weight: 300;
+	font-size: .75em;
+	text-align: left;
+	letter-spacing: 1.5px;
+}
+
+.tab:focus,.tab:active,.tab:hover {
+	font-size: .80em;
+}
+
+
+.tabContent {
+	width: 100%;
+	border: solid 1px #000;
+	font-weight: 100;
+	color: #000;
+	background: #fff;
+	border-top-left-radius: 0px;
+	padding: 0 15px;
+	height: 250px;
+	overflow: auto;
+	box-shadow: 5px 7px 5px rgba(0, 0, 0, 0.22);
+
 }
 
 /******************************/
 /*STYLING FOR BAR GRAPH RESULTS*/
 /******************************/
 .bar {
-	display: inline-block;
-	height: 25px;
-	line-height: 25px;
+	height: 20px;
 	margin: 10px 0px;
 	color: #000;
 	vertical-align: middle;
@@ -77,10 +135,45 @@ ul.list li {
 /* STYLE FOR TEXT AREA - INPUT*/
 /******************************/
 #summaryText {
-	border-color:#2980b9;
+
 	border-width: 2px;
-	box-shadow: none;
-	border-radius: 0px;	
-	color: #2980b9;
+	border-radius: 0;
+	font-weight: 200;
+	font-size: small;	
 	text-align: justify;
+}
+
+/******************************/
+/*Mobile design*/
+/******************************/
+@media only screen and (min-width: 768px) {
+
+.personalityDiv {
+	padding: 0;
+	display: inline-block;
+}
+
+label {
+	font-weight: 200;
+	font-size: 1.2em;
+}
+
+.tabContent {
+	width: 100%;
+	border: solid 1px #000;
+	font-weight: 100;
+	color: #000;
+	border-width: 1px;
+	margin-top: 0px;
+	padding: 15px;
+	background: #fff;
+	border-top-left-radius: 0px;
+}
+
+.form-group {
+	 margin-top: 100px;
+   text-align: justify;
+   margin-left: 300px;
+}
+
 }

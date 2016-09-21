@@ -10,8 +10,8 @@ body {
 	background-size: cover;
 	background-image: url("https://hd.unsplash.com/photo-1421930535025-d2af27c14065");
 	background-repeat: no-repeat;
-	background-color: #ecf0f1;
-	background-size: 100% 100%;
+	background-color: #fff;
+	background-size: 100% 85%;
 	background-position: top;
 	min-height: 100%;
 	margin: 0;
@@ -24,7 +24,7 @@ html {
 }
 
 hr {
-	width: 400px;
+	width: 200px;
 	border-top: 1px solid #f8f8f8;
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
@@ -159,40 +159,7 @@ button:focus {
 	font-size: 1.2em;
 }
 
-/*Personality tabs - big5, needs, values, conclusion*/
-.tab {
-	background: none;
-	color: #fff;
-	outline: none;
-	margin-right: 12px;
-	border: 1px solid #1abc9c;
-	color: #fff;
-	border-bottom-style: none;
-	margin-right: -3px;
-	padding: 15px 15px;
-	display: inline;
-	width: 23%;
-	text-align: center;
-	letter-spacing: 1px;
-}
 
-.tab:focus,.tab:active,.tab:hover {
-	font-size: 1.1em;
-}
-
-
-.tabContent {
-	width: 100%;
-	border: solid 1px #000;
-	font-family: 'Lato';
-	font-weight: 100;
-	color: #000;
-	border-width: 2px;
-	margin-top: 0px;
-	padding: 15px;
-	background: #fff;
-	border-top-left-radius: 0px;
-}
 /******************************/
 
 
@@ -464,6 +431,7 @@ element.style {
 #footer p {
 	padding: 15px 0;
 	margin: 0;
+	font-size: .8em;
 }
 /******************************/
 
@@ -498,12 +466,7 @@ height: 5%;
 margin: 10px 10px;
 }
 
-@media only screen and (max-width : 800px) {
-	.demo-1 .main-title, 
-	.demo-3 .main-title,
-	.demo-4 .main-title {
-		font-size: 3em;
-	}
+@media only screen and (min-width: 768px) {
 	
 	body {
 		width: 112%;
@@ -511,6 +474,11 @@ margin: 10px 10px;
 	.navbar {
 	padding: 1px;
 	}
+
+	label {
+	font-weight: 200;
+	font-size: 1.0em;
+}
 
 	#aboutUs {
 	border: 2px solid #000;
@@ -535,7 +503,7 @@ border-radius: 5%;
 height: 5%;
 margin: 10px 10px;
 }
-
+	
 .personalityDiv {
 		padding-top: 100%;
 	}
@@ -556,5 +524,11 @@ margin: 10px 10px;
 
 #footer {
 	width: 100%;
+}
+
+.form-group {
+ margin-top: 100px;
+text-align: justify;
+
 }
 }
