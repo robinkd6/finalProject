@@ -11,7 +11,7 @@ body {
 	background-image: url("https://hd.unsplash.com/photo-1421930535025-d2af27c14065");
 	background-repeat: no-repeat;
 	background-color: #fff;
-	background-size: 100% 85%;
+	background-size: 100% 105%;
 	background-position: top;
 	min-height: 100%;
 	margin: 0;
@@ -439,18 +439,30 @@ element.style {
 /* About us section styling */
 /******************************/
 #aboutUs {
-	border: 2px solid #000;
-	background: #fff;
-	padding: 30px 40px;
-	margin: 100px;
-	font-family: 'Lato';
-	font-weight: 300;
-	height: 100%;
+border: 1px solid #000;
+background: #fff;
+padding: 20px 20px;
+margin-top: 130px;
+/* font-family: 'Lato'; */
+font-weight: 300;
+height: 400px;
+overflow: auto;
+width: 100%;
 
 }
 
 #aboutUs > hr {
 	width: 100%;
+}
+
+#aboutUsHead {
+	text-align: center;
+	font-size: 2.05em;
+}
+
+.aboutSum {
+	font-size: .8em;
+	line-height: 1.5;
 }
 
 /******************************/
@@ -460,9 +472,8 @@ float: left;
 max-width: 50%;
 margin: 0 auto;
 margin-right: 30px;
-border: 2px solid #2c3e50;
+border: 1px solid #2c3e50;
 border-radius: 5%;
-height: 5%;
 margin: 10px 10px;
 }
 
