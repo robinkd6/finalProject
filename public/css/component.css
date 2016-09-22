@@ -500,37 +500,52 @@ margin: 10px 10px;
 	font-size: 1.0em;
 }
 
-	#aboutUs {
-	border: 2px solid #000;
-	background: #fff;
-	padding: 15px 20px;
-	margin: 50px;
-	font-family: 'Lato';
-	font-weight: 200;
-	font-size: .75em;
-	height: 50%;
-	width: 100%;
+/******************************/
+/* About us section styling */
+/******************************/
 
+#aboutUs {
+border: 1px solid #000;
+background: #fff;
+padding: 25px 70px;
+margin-top: 130px;
+font-weight: 300;
+height: 400px;
+overflow: auto;
+width: 100%;
 }
 
-div.homepage {
-	padding-top: 18%;
+#aboutUs > hr {
+	width: 85%;
+}
+
+#aboutUsHead {
 	text-align: center;
-	color: #fff;
-	margin-right: 160px;
+	font-size: 2.05em;
+}
+
+.aboutSum {
+	line-height: 1.2;
+	font-weight: 100;
+	font-size: 1.1em;
 }
 
 .profile-photo {
 float: left;
 max-width: 75%;
-margin: 0 auto;
-margin-right: 60px;
-border: 2px solid #2c3e50;
-border-radius: 5%;
-height: 5%;
-margin: 10px 10px;
+border: 1px solid #2c3e50;
+border-radius: 3%;
+margin: 10px 0;
+margin-right: 50px;
 }
-	
+
+
+div.homepage {
+	padding-top: 18%;
+	text-align: center;
+	color: #fff;
+}
+
 .personalityDiv {
 		padding-top: 100%;
 		margin-left: 80px;
