@@ -168,6 +168,7 @@ label {
 .list-group {
 	width: 300px;
 	float: left;
+	font-size: .65em;
 }
 
 .tabContent {
