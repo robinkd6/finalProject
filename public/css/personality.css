@@ -74,9 +74,12 @@ ul.list li {
 	font-weight: 300;
 }
 
-/*Personality tabs - big5, needs, values, conclusion*/
+/*********************************/
+/*Personality tabs - big5, needs,
+ values, conclusion*/
+ /*********************************/
+
 .tab {
-	
 	color: #fff;
 	background: #ecf0f1;
 	border: 1px solid #bdc3c7;
@@ -153,6 +156,9 @@ label {
 	font-weight: 200;
 	font-size: 1.2em;
 }
+/*********************************/
+/*Results after analysis*/
+/*********************************/
 
 #divResults {
 	margin-left: 180px;
@@ -170,6 +176,10 @@ label {
 	float: left;
 	font-size: .65em;
 }
+
+/*********************************/
+/*Tabs for results*/
+/*********************************/
 
 .tabContent {
 	width: 100%;
